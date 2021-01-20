@@ -1,7 +1,7 @@
 using System;
 
 namespace Palett.Utils.Ansi {
-  public enum Effects {
+  public enum Effect {
     Bold,
     Italic,
     Underline,
@@ -9,12 +9,12 @@ namespace Palett.Utils.Ansi {
   }
 
   public static class EffectCodes {
-    public static (string, string)? EffectToAnsi(this Effects effect) {
+    public static (string, string) EffectToAnsi(this Effect effect) {
       switch (effect) {
-        case Effects.Bold: return (BOLD, CLR_BOLD);
-        case Effects.Italic: return (ITALIC, CLR_ITALIC);
-        case Effects.Underline: return (UNDERLINE, CLR_UNDERLINE);
-        case Effects.Inverse: return (INVERSE, CLR_INVERSE);
+        case Effect.Bold: return (BOLD, CLR_BOLD);
+        case Effect.Italic: return (ITALIC, CLR_ITALIC);
+        case Effect.Underline: return (UNDERLINE, CLR_UNDERLINE);
+        case Effect.Inverse: return (INVERSE, CLR_INVERSE);
         default: throw new ArgumentOutOfRangeException(nameof(effect), effect, null);
       }
     }

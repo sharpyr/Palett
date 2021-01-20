@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -13,4 +13,8 @@
     <FileVersion>0.0.1</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />
+    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
+  </ItemGroup>
 </Project>
