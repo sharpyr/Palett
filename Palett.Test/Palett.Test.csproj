@@ -14,6 +14,12 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="NUnit" Version="3.13.0"/>
+        <PackageReference Include="NUnit" Version="3.13.0" />
+        <PackageReference Include="Veho" Version="0.0.7" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />
+      <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj" />
+      <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
     </ItemGroup>
 </Project>

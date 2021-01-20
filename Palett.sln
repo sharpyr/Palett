@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Dye", "Palett.Dye\Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Test", "Palett.Test\Palett.Test.csproj", "{D794DA99-C0AC-47AD-9A29-F1D888176BE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Convert", "Palett.Convert\Palett.Convert.csproj", "{42F896EF-2B1C-4E6B-AE13-2D2DD3B52C07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Utils", "Palett.Utils\Palett.Utils.csproj", "{3E287C96-2BA7-46B2-97AC-90CD4DD3794D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{D794DA99-C0AC-47AD-9A29-F1D888176BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D794DA99-C0AC-47AD-9A29-F1D888176BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D794DA99-C0AC-47AD-9A29-F1D888176BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F896EF-2B1C-4E6B-AE13-2D2DD3B52C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F896EF-2B1C-4E6B-AE13-2D2DD3B52C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F896EF-2B1C-4E6B-AE13-2D2DD3B52C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F896EF-2B1C-4E6B-AE13-2D2DD3B52C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E287C96-2BA7-46B2-97AC-90CD4DD3794D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E287C96-2BA7-46B2-97AC-90CD4DD3794D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E287C96-2BA7-46B2-97AC-90CD4DD3794D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E287C96-2BA7-46B2-97AC-90CD4DD3794D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
