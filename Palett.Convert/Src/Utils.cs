@@ -1,6 +1,5 @@
 using System;
-using System.Diagnostics;
-using MiscUtil;
+using Generic.Math;
 
 namespace Palett.Convert {
   public static class Utils {
@@ -14,7 +13,7 @@ namespace Palett.Convert {
       if (z.CompareTo(max) > 0) { (max, pos) = (z, 3); }
       if (min.CompareTo(z) > 0) { min = z; }
       if (min.CompareTo(max) == 0) { pos = 0; }
-      return (Operator.Add(max, min), Operator.Subtract(max, min), pos);
+      return (GenericMath<T>.Add(max, min), GenericMath<T>.Subtract(max, min), pos);
     }
 
     public static float Hue(float r, float g, float b, float dif, int pos) {

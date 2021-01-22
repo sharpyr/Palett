@@ -1,5 +1,5 @@
 using System;
-using MiscUtil;
+using Generic.Math;
 
 namespace Palett.Convert {
   public struct ColorBound<T> where T : IComparable<T> {
@@ -16,8 +16,8 @@ namespace Palett.Convert {
       if (vi.CompareTo(z) > 0) { vi = z; }
       return new ColorBound<T>() {
         Max = va,
-        Sum = Operator.Add(va, vi),
-        Dif = Operator.Subtract(va, vi)
+        Sum = GenericMath<T>.Add(va, vi),
+        Dif = GenericMath<T>.Subtract(va, vi)
       };
     }
 
