@@ -1,19 +1,17 @@
 using System;
 using HSL = System.ValueTuple<float, float, float>;
-using RGB = System.ValueTuple<int, int, int>;
+using RGB = System.ValueTuple<byte, byte, byte>;
 
 namespace Palett.Convert {
   public static class Converter {
-    public static HSL HexToHsl(string hex) {
-      return HexToRgb(hex).RgbToHsl();
-    }
+    public static HSL HexToHsl(string hex) => HexToRgb(hex).RgbToHsl();
     public static int HexToInt(string hex) {
       hex = hex.TrimStart('#');
       return System.Convert.ToInt32(hex, 16);
     }
     public static RGB HexToRgb(string hex) {
       var num = HexToInt(hex);
-      return (num >> 16 & 0xFF, num >> 8 & 0xFF, num & 0xFF);
+      return ((byte) (num >> 16 & 0xFF), (byte) (num >> 8 & 0xFF), (byte) (num & 0xFF));
     }
     public static string HslToHex(this HSL hsl) {
       return hsl.HslToRgb().RgbToHex();
@@ -26,11 +24,9 @@ namespace Palett.Convert {
       var r = Utils.Hal(0, h, a, l);
       var g = Utils.Hal(8, h, a, l);
       var b = Utils.Hal(4, h, a, l);
-      return ((int) (r * 0xFF), (int) (g * 0xFF), (int) (b * 0xFF));
+      return ((byte) (r * 0xFF), (byte) (g * 0xFF), (byte) (b * 0xFF));
     }
-    public static string RgbToHex(this RGB rgb) {
-      return "#" + RgbToInt(rgb).ToString("X6");
-    }
+    public static string RgbToHex(this RGB rgb) => "#" + RgbToInt(rgb).ToString("X6");
     public static HSL RgbToHsl(this RGB rgb) {
       const float THOUSAND = 1000;
       var (r, g, b) = rgb.Map(v => (float) v / 255);

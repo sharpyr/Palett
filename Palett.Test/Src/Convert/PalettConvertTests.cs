@@ -8,7 +8,7 @@ namespace Palett.Test.Convert {
   public class PalettConvertTests {
     [Test]
     public void ColorConvertTest() {
-      var tuples = new Dictionary<String, (int, int, int)> {
+      var tuples = new Dictionary<String, (byte, byte, byte)> {
         {"BLACK", (0, 0, 0)},
         {"RED", (255, 0, 0)},
         {"GREEN", (0, 255, 0)},

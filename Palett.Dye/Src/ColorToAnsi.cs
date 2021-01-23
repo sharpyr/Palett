@@ -4,9 +4,9 @@ using static Palett.Utils.Ansi.ControlCodes;
 
 namespace Palett.Dye {
   using HSL = System.ValueTuple<float, float, float>;
-  using RGB = System.ValueTuple<int, int, int>;
+  using RGB = System.ValueTuple<byte, byte, byte>;
 
-  public class ColorToAnsi {
+  public static class ColorToAnsi {
     public static string RgbToAnsi(RGB rgb) {
       var (r, g, b) = rgb;
       return $"{FORE}{SC}{r}{SC}{g}{SC}{b}";

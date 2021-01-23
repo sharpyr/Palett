@@ -2,7 +2,7 @@
 using Palett.Utils.Ansi;
 using static Palett.Utils.Ansi.ControlCodes;
 using HSL = System.ValueTuple<float, float, float>;
-using RGB = System.ValueTuple<int, int, int>;
+using RGB = System.ValueTuple<byte, byte, byte>;
 
 namespace Palett.Dye {
   public class DyeFactory<T> {
