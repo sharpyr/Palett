@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Palett.Utils.Ansi;
 using static Palett.Utils.Ansi.ControlCodes;
 using HSL = System.ValueTuple<float, float, float>;
@@ -10,13 +11,13 @@ namespace Palett.Dye {
     private string tail = "";
     private Func<T, string> ansi;
 
-    public static DyeFactory<T> Build(Func<T, string> ansi, Effect[] effects) =>
+    public static DyeFactory<T> Build(Func<T, string> ansi, params Effect[] effects) =>
       new DyeFactory<T> {ansi = ansi}.AssignEffects(effects);
-    public static DyeFactory<RGB> Rgb(Effect[] effects) => DyeFactory<RGB>.Build(ColorToAnsi.RgbToAnsi, effects);
-    public static DyeFactory<HSL> Hsl(Effect[] effects) => DyeFactory<HSL>.Build(ColorToAnsi.HslToAnsi, effects);
-    public static DyeFactory<string> Hex(Effect[] effects) => DyeFactory<string>.Build(ColorToAnsi.HexToAnsi, effects);
+    public static DyeFactory<RGB> Rgb(params Effect[] effects) => DyeFactory<RGB>.Build(ColorToAnsi.RgbToAnsi, effects);
+    public static DyeFactory<HSL> Hsl(params Effect[] effects) => DyeFactory<HSL>.Build(ColorToAnsi.HslToAnsi, effects);
+    public static DyeFactory<string> Hex(params Effect[] effects) => DyeFactory<string>.Build(ColorToAnsi.HexToAnsi, effects);
 
-    private DyeFactory<T> AssignEffects(Effect[] effects) {
+    private DyeFactory<T> AssignEffects(IEnumerable<Effect> effects) {
       foreach (var effect in effects) {
         var (h, t) = effect.EffectToAnsi();
         head += SC + h;
