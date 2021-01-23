@@ -1,19 +1,30 @@
 using System;
-using Generic.Math;
 
 namespace Palett.Convert {
   public static class Utils {
+    const float EPSILON = (float) 0.001;
+
     public static (P, P, P) Map<T, P>(this (T, T, T) xyz, Func<T, P> fn) {
       var (x, y, z) = xyz;
       return (fn(x), fn(y), fn(z));
     }
-    public static (T, T, int) SumDifPos<T>(T x, T y, T z) where T : IComparable<T> {
+    // public static (T, T, int) SumDifPos<T>(T x, T y, T z) where T : IComparable<T> {
+    //   var (max, min, pos) = (x, x, 1);
+    //   if (y.CompareTo(x) > 0) { (max, pos) = (y, 2); } else { min = y; }
+    //   if (z.CompareTo(max) > 0) { (max, pos) = (z, 3); }
+    //   if (min.CompareTo(z) > 0) { min = z; }
+    //   if (min.CompareTo(max) == 0) { pos = 0; }
+    //   return (GenericMath<T>.Add(max, min), GenericMath<T>.Subtract(max, min), pos);
+    // }
+
+    public static (float, float, int) SumDifPos(float x, float y, float z) {
       var (max, min, pos) = (x, x, 1);
-      if (y.CompareTo(x) > 0) { (max, pos) = (y, 2); } else { min = y; }
-      if (z.CompareTo(max) > 0) { (max, pos) = (z, 3); }
-      if (min.CompareTo(z) > 0) { min = z; }
-      if (min.CompareTo(max) == 0) { pos = 0; }
-      return (GenericMath<T>.Add(max, min), GenericMath<T>.Subtract(max, min), pos);
+      if (y > x) { (max, pos) = (y, 2); }
+      else { min = y; }
+      if (z > max) { (max, pos) = (z, 3); }
+      if (z < min) { min = z; }
+      float sum = max + min, dif = max - min;
+      return (sum, dif, dif < EPSILON ? 0 : pos);
     }
 
     public static float Hue(float r, float g, float b, float dif, int pos) {

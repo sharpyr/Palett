@@ -15,7 +15,7 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="NUnit" Version="3.13.0" />
-        <PackageReference Include="Veho" Version="0.0.8" />
+        <PackageReference Include="Veho" Version="0.0.9" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />
