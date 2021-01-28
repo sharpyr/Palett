@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -14,12 +14,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
+    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Src"/>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Generic.Math" Version="1.0.2"/>
+    <PackageReference Include="Generic.Math" Version="1.0.2" />
   </ItemGroup>
 </Project>
