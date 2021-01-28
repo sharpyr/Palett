@@ -7,7 +7,7 @@
     <Description>Projector of dye</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
-    <Copyright>Hoyeung Wong (c) 2020-present</Copyright>
+    <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AssemblyVersion>0.0.4</AssemblyVersion>
     <FileVersion>0.0.4</FileVersion>
