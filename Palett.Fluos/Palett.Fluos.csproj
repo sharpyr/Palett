@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -14,12 +14,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Bounds" Version="0.0.4"/>
-    <PackageReference Include="Typen" Version="0.0.3"/>
+    <PackageReference Include="Aryth.Bounds" Version="0.0.4" />
+    <PackageReference Include="Typen" Version="0.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj"/>
-    <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj"/>
-    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
+    <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj" />
+    <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj" />
+    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
   </ItemGroup>
 </Project>

@@ -21,8 +21,8 @@ namespace Palett.Projector.Utils {
         max
       );
     }
-    public static float Scale(double value, double floor, float lever, float basis, float ceil) =>
-      Math.Min((float) (Math.Max(value, floor) - floor) * lever + basis, ceil);
+    public static float Scale(double value, double floor, double lever, float basis, float ceil) =>
+      Math.Min((float) ((Math.Max(value, floor) - floor) * lever) + basis, ceil);
 
     public static HSL Div(this (float x, float y, float z) t, float other) => (t.x / other, t.y / other, t.z / other);
   }

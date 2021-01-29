@@ -5,11 +5,12 @@ using Palett.Projector.Utils;
 using Palett.Utils.Types;
 using Typen;
 using HSL = System.ValueTuple<float, float, float>;
+using DHSL = System.ValueTuple<double, double, double>;
 
 namespace Palett.Projector {
   public class ProjectorFactory {
     public double Floor;
-    public HSL Lever;
+    public DHSL Lever;
     public HSL Basis;
     public DyeFactory<HSL> Factory;
     public HSL Default;
@@ -28,26 +29,24 @@ namespace Palett.Projector {
         Default = Converter.HexToHsl(preset.Na)
       };
     }
+    public string Render(double num, string text) => this.Factory.Render(this.Project(num), text);
+    public Func<string, string> Make(double num) => this.Factory.Make(this.Project(num));
 
     public string Render<T>(T num, string text) => this.Factory.Render(this.Project(num.Cast<T, double>()), text);
     public Func<string, string> Make<T>(T num) => this.Factory.Make(this.Project(num.Cast<T, double>()));
 
-    public string Render(double value, string text) => this.Factory.Render(this.Project(value), text);
-
-    public Func<string, string> Make(double value) => this.Factory.Make(this.Project(value));
-
-    public Func<string, string> MakeDefault() => this.Factory.Make(this.Default);
-
-    public HSL Project(double val) {
-      if (double.IsNaN(val)) { return this.Default; }
+    public HSL Project(double num) {
+      if (double.IsNaN(num)) { return this.Default; }
       var floor = this.Floor;
       var (leverH, leverS, leverL) = this.Lever;
-      var (baseH, baseS, baseL) = this.Basis;
+      var (basisH, basisS, basisL) = this.Basis;
       return (
-        Util.Scale(val, floor, leverH, baseH, 360),
-        Util.Scale(val, floor, leverS, baseS, 100),
-        Util.Scale(val, floor, leverL, baseL, 100)
+        Util.Scale(num, floor, leverH, basisH, 360),
+        Util.Scale(num, floor, leverS, basisS, 100),
+        Util.Scale(num, floor, leverL, basisL, 100)
       );
     }
+
+    public Func<string, string> MakeDefault() => this.Factory.Make(this.Default);
   }
 }
