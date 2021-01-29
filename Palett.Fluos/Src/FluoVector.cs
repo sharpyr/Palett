@@ -4,10 +4,19 @@ using Palett.Fluos.Utils;
 using Palett.Projector;
 using Palett.Utils.Types;
 using Typen;
+using Veho.Matrix.Rows;
 using Veho.Vector;
 
 namespace Palett.Fluos {
   public static class FluoVector {
+    public static string[,] Fluo<T>(this T[,] vec, int operated, (Preset, Preset) presets, params Effect[] effects) {
+      switch (operated) {
+        case 0: return vec.FluoPointwise(presets, effects);
+        case 1: return vec.FluoRows(presets, effects).RowsToMatrix();
+        case 2: return vec.FluoColumns(presets, effects).RowsToMatrix();
+        default: return default;
+      }
+    }
     public static string[] Fluo<T>(this T[] vec, (Preset, Preset) presets, params Effect[] effects) {
       var texts = vec.Map(Conv.ToStr);
       var ((vecX, facX), (vecY, facY)) = texts.MakeProjector(presets, effects);

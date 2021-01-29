@@ -8,13 +8,13 @@ using Veho.Matrix;
 
 namespace Palett.Fluos {
   public static class FluoMatrix {
-    public static string[,] Fluo<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
+    public static string[,] FluoPointwise<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       var texts = mat.Map(Conv.ToStr);
       var ((matX, facX), (matY, facY)) = texts.MakeProjector(presets, effects);
       return ZipperFactory.RenderZipper(facX, facY).Zipper(matX, matY, texts);
     }
 
-    public static Func<string, string>[,] FluoMake<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
+    public static Func<string, string>[,] FluoPointwiseMake<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       var ((matX, facX), (matY, facY)) = mat.MakeProjector(presets, effects);
       return ZipperFactory.MakerZipper(facX, facY).Zipper(matX, matY);
     }

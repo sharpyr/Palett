@@ -3,6 +3,7 @@ using NUnit.Framework;
 using Palett.Fluos;
 using Spare.Deco;
 using Spare.Logger;
+using Veho.List;
 using static Palett.Presets.PresetCollection;
 
 namespace Palett.Test.Fluos {
@@ -33,6 +34,25 @@ namespace Palett.Test.Fluos {
       var preset = (Planet, Fresh);
       var result = samples.Fluo(preset);
       result.Deco().Logger();
+    }
+
+    [Test]
+    public void FluoRowwiseAndColumnwiseTest() {
+      var samples = new[,] {
+        {"1", "2", "3", "4"},
+        {"8", "9", "10", "11"},
+        {"0", "0", "0", "0"},
+        {"1", "1", "1", "1"},
+      };
+      var preset = (Planet, Fresh);
+
+      samples.FluoRows(preset).Iterate(row => {
+        row.Deco().Logger();
+      });
+      
+      samples.FluoColumns(preset).Iterate(column => {
+        column.Deco().Logger();
+      });
     }
   }
 }
