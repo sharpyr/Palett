@@ -1,13 +1,7 @@
 using System;
+using Palett.Utils.Types;
 
 namespace Palett.Utils.Ansi {
-  public enum Effect {
-    Bold,
-    Italic,
-    Underline,
-    Inverse
-  }
-
   public static class EffectCodes {
     public static (string, string) EffectToAnsi(this Effect effect) {
       switch (effect) {
