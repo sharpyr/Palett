@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageVersion>0.0.6</PackageVersion>
-    <Title>Palett.Projector</Title>
-    <Description>Projector of dye</Description>
+    <Title>Palett.Fluo</Title>
+    <Description>Color 1d-array and 2d-array</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
@@ -14,11 +14,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj"/>
-    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
+    <PackageReference Include="Aryth.Bounds" Version="0.0.4"/>
+    <PackageReference Include="Typen" Version="0.0.3"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Generic.Math" Version="1.0.2"/>
-    <PackageReference Include="Typen" Version="0.0.3"/>
+    <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj"/>
+    <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj"/>
+    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
   </ItemGroup>
 </Project>

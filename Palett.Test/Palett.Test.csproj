@@ -15,11 +15,13 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="NUnit" Version="3.13.0" />
-        <PackageReference Include="Veho" Version="0.0.24" />
+        <PackageReference Include="Spare" Version="0.0.12" />
+        <PackageReference Include="Veho" Version="0.0.25" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />
       <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj" />
+      <ProjectReference Include="..\Palett.Fluos\Palett.Fluos.csproj" />
       <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj" />
       <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj" />
       <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />

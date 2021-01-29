@@ -14,26 +14,26 @@ namespace Palett.Dye {
   }
 
   public class DyeFactory<T> {
-    private string head = "";
-    private string tail = "";
-    private Func<T, string> ansi;
+    private string _head  = "";
+    private string _tail  = "";
+    private Func<T, string> _ansi;
 
     public static DyeFactory<T> Build(Func<T, string> ansi, params Effect[] effects) =>
-      new DyeFactory<T> {ansi = ansi}.AssignEffects(effects);
+      new DyeFactory<T> {_ansi = ansi}.AssignEffects(effects);
 
     private DyeFactory<T> AssignEffects(IEnumerable<Effect> effects) {
       foreach (var effect in effects) {
         var (h, t) = effect.EffectToAnsi();
-        head += SC + h;
-        tail += SC + t;
+        _head += SC + h;
+        _tail += SC + t;
       }
       return this;
     }
 
     public (string, string) Toning(T color) {
-      var c = ansi(color);
-      var h = L + head + SC + c + R;
-      var t = L + tail + R;
+      var c = _ansi(color);
+      var h = L + _head + SC + c + R;
+      var t = L + _tail + R;
       return (h, t);
     }
 

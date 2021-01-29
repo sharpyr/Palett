@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Cards", "Palett.Card
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Presets", "Palett.Presets\Palett.Presets.csproj", "{0117FBDE-A72F-44E6-9FDA-42DF0175EE1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Fluo", "Palett.Fluo\Palett.Fluo.csproj", "{C0C04570-0076-4B54-8BCC-529F02D84122}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Fluos", "Palett.Fluos\Palett.Fluos.csproj", "{C0C04570-0076-4B54-8BCC-529F02D84122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
