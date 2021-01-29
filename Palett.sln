@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Cards", "Palett.Card
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Presets", "Palett.Presets\Palett.Presets.csproj", "{0117FBDE-A72F-44E6-9FDA-42DF0175EE1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Fluo", "Palett.Fluo\Palett.Fluo.csproj", "{C0C04570-0076-4B54-8BCC-529F02D84122}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{0117FBDE-A72F-44E6-9FDA-42DF0175EE1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0117FBDE-A72F-44E6-9FDA-42DF0175EE1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0117FBDE-A72F-44E6-9FDA-42DF0175EE1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C04570-0076-4B54-8BCC-529F02D84122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C04570-0076-4B54-8BCC-529F02D84122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C04570-0076-4B54-8BCC-529F02D84122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C04570-0076-4B54-8BCC-529F02D84122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

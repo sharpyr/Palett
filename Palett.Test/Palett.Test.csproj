@@ -20,6 +20,8 @@
     <ItemGroup>
       <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />
       <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj" />
+      <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj" />
+      <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj" />
       <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
     </ItemGroup>
 </Project>

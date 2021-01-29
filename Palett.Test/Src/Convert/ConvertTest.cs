@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Palett.Convert;
 using Palett.Dye;
 using Palett.Test.Assets;
-using Palett.Utils.Ansi;
+using Palett.Utils.Types;
 using RGB = System.ValueTuple<byte, byte, byte>;
 
 namespace Palett.Test.Convert {
@@ -11,7 +11,7 @@ namespace Palett.Test.Convert {
   public class PalettConvertTests {
     [Test]
     public void ColorConvertTest() {
-      var dyeFac = DyeFactory<RGB>.Rgb(Effect.Bold, Effect.Underline);
+      var dyeFac = DyeFactory.Rgb(Effect.Bold, Effect.Underline);
       foreach (var kv in ColorDictCollection.ConsoleColorDict) {
         // rgb -> hsl -> hex -> rgb -> int
         var rgb = kv.Value.ColorToRgb();
