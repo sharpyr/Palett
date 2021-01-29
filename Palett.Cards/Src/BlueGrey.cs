@@ -2,7 +2,7 @@ using Palett.Utils.Types;
 
 namespace Palett.Cards {
   public static partial class CardCollection {
-    public static Card BlueGrey = new Card() {
+    public static readonly Card BlueGrey = new Card {
       Basis = "#607D8B",
       Lighten5 = "#ECEFF1",
       Lighten4 = "#CFD8DC",
