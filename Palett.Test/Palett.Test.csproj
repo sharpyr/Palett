@@ -17,7 +17,7 @@
         <PackageReference Include="NUnit" Version="3.13.0" />
         <PackageReference Include="Spare" Version="0.0.12" />
         <PackageReference Include="Typen" Version="0.0.3" />
-        <PackageReference Include="Veho" Version="0.0.26" />
+        <PackageReference Include="Veho" Version="0.0.29" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />

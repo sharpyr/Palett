@@ -1,9 +1,11 @@
 ﻿using Aryth.Bounds;
 using NUnit.Framework;
 using Palett.Fluos;
+using Palett.Fluos.Matrix;
 using Spare.Deco;
 using Spare.Logger;
 using Veho.List;
+using Veho.Types;
 using static Palett.Presets.PresetCollection;
 
 namespace Palett.Test.Fluos {
@@ -32,7 +34,7 @@ namespace Palett.Test.Fluos {
       $"X [vec] {veX.Deco()} [bound] {bdX}".Logger();
       $"Y [vec] {veY.Deco()} [bound] {bdY}".Logger();
       var preset = (Planet, Fresh);
-      var result = samples.Fluo(preset);
+      var result = samples.FluoPoints(preset);
       result.Deco().Logger();
     }
 
@@ -46,13 +48,8 @@ namespace Palett.Test.Fluos {
       };
       var preset = (Planet, Fresh);
 
-      samples.FluoRows(preset).Iterate(row => {
-        row.Deco().Logger();
-      });
-      
-      samples.FluoColumns(preset).Iterate(column => {
-        column.Deco().Logger();
-      });
+      samples.Fluo(Operated.Columnwise, preset).Deco().Logger();
+      samples.Fluo(Operated.Rowwise, preset).Deco().Logger();
     }
   }
 }

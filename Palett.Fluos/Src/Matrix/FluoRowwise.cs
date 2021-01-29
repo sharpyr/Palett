@@ -1,13 +1,8 @@
 ﻿using System;
-using Aryth.Bounds;
-using Palett.Fluos.Utils;
-using Palett.Projector;
 using Palett.Utils.Types;
-using Typen;
-using Veho.Matrix;
 using Veho.Matrix.Rows;
 
-namespace Palett.Fluos {
+namespace Palett.Fluos.Matrix {
   public static class FluoRowwise {
     public static string[][] FluoRows<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       return mat.MapRows(row => row.Fluo(presets, effects));

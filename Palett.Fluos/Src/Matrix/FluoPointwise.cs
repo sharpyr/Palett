@@ -6,9 +6,9 @@ using Palett.Utils.Types;
 using Typen;
 using Veho.Matrix;
 
-namespace Palett.Fluos {
-  public static class FluoMatrix {
-    public static string[,] FluoPointwise<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
+namespace Palett.Fluos.Matrix {
+  public static class FluoPointwise {
+    public static string[,] FluoPoints<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       var texts = mat.Map(Conv.ToStr);
       var ((matX, facX), (matY, facY)) = texts.MakeProjector(presets, effects);
       return ZipperFactory.RenderZipper(facX, facY).Zipper(matX, matY, texts);
