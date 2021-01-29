@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using Aryth.Bounds;
 using Palett.Fluos.Utils;
 using Palett.Projector;
@@ -11,12 +12,17 @@ namespace Palett.Fluos.Matrix {
     public static string[,] FluoPoints<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       var texts = mat.Map(Conv.ToStr);
       var ((matX, facX), (matY, facY)) = texts.MakeProjector(presets, effects);
-      return ZipperFactory.RenderZipper(facX, facY).Zipper(matX, matY, texts);
+      return ProjectorUtils.RenderZipper(facX, facY).Zipper(matX, matY, texts);
     }
 
-    public static Func<string, string>[,] FluoPointwiseMake<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
+    public static Func<string, string>[,] FluoPointsMake<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       var ((matX, facX), (matY, facY)) = mat.MakeProjector(presets, effects);
-      return ZipperFactory.MakerZipper(facX, facY).Zipper(matX, matY);
+      return ProjectorUtils.MakerZipper(facX, facY).Zipper(matX, matY);
+    }
+
+    public static Color?[,] FluoPointsColor<T>(this T[,] mat, (Preset, Preset) presets) {
+      var ((matX, facX), (matY, facY)) = mat.MakeProjector(presets);
+      return ProjectorUtils.ColorZipper(facX, facY).Zipper(matX, matY);
     }
 
     public static ((double[,], ProjectorFactory), (double[,], ProjectorFactory)) MakeProjector<T>(

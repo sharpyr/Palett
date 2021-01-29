@@ -50,6 +50,8 @@ namespace Palett.Projector {
       );
     }
 
+    public HSL Project<T>(T num) => this.Project(num.Cast<T, double>());
+
     public Func<string, string> MakeDefault() => this.Factory.Make(this.Default);
   }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using Palett.Utils.Types;
 using Veho.Matrix.Columns;
 
@@ -7,9 +8,13 @@ namespace Palett.Fluos.Matrix {
     public static string[][] FluoColumns<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       return mat.MapColumns(row => row.Fluo(presets, effects));
     }
-
+    
     public static Func<string, string>[][] FluoColumnsMake<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) {
       return mat.MapColumns(row => row.FluoMake(presets, effects));
+    }
+    
+    public static Color?[][] FluoColumnsColor<T>(this T[,] mat, (Preset, Preset) presets) {
+      return mat.MapColumns(row => row.FluoColor(presets));
     }
   }
 }
