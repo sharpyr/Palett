@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Palett.Types;
 using Palett.Utils.Ansi;
-using Palett.Utils.Types;
 using static Palett.Utils.Ansi.ControlCodes;
 using HSL = System.ValueTuple<float, float, float>;
 using RGB = System.ValueTuple<byte, byte, byte>;

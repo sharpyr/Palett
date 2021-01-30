@@ -3,7 +3,7 @@ using System.Linq;
 using NUnit.Framework;
 using Palett.Presets;
 using Palett.Projector;
-using Palett.Utils.Types;
+using Palett.Types;
 
 namespace Palett.Test.ProjectorFactories {
   [TestFixture]

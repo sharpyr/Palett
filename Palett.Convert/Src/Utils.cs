@@ -4,10 +4,10 @@ namespace Palett.Convert {
   public static class Utils {
     const float EPSILON = (float) 0.001;
 
-    public static (P, P, P) Map<T, P>(this (T, T, T) xyz, Func<T, P> fn) {
-      var (x, y, z) = xyz;
-      return (fn(x), fn(y), fn(z));
-    }
+    // public static (P, P, P) Map<T, P>(this (T, T, T) xyz, Func<T, P> fn) {
+    //   var (x, y, z) = xyz;
+    //   return (fn(x), fn(y), fn(z));
+    // }
     // public static (T, T, int) SumDifPos<T>(T x, T y, T z) where T : IComparable<T> {
     //   var (max, min, pos) = (x, x, 1);
     //   if (y.CompareTo(x) > 0) { (max, pos) = (y, 2); } else { min = y; }

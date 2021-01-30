@@ -1,7 +1,7 @@
 ﻿using System;
 using Palett.Convert;
 using Palett.Dye;
-using Palett.Utils.Types;
+using Palett.Types;
 using HSL = System.ValueTuple<float, float, float>;
 
 namespace Palett.Projector.Utils {

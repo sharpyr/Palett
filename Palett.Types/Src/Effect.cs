@@ -1,4 +1,4 @@
-﻿namespace Palett.Utils.Types {
+﻿namespace Palett.Types {
   public enum Effect {
     Bold,
     Italic,

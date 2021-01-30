@@ -1,5 +1,5 @@
 using System;
-using Palett.Utils.Types;
+using Palett.Types;
 
 namespace Palett.Utils.Ansi {
   public static class EffectCodes {

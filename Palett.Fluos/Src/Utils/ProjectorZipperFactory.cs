@@ -4,7 +4,7 @@ using Palett.Convert;
 using Palett.Projector;
 
 namespace Palett.Fluos.Utils {
-  public static class ProjectorUtils {
+  public static class ProjectorZipperFactory {
     public static Func<double, double, Color?> ColorZipper(ProjectorFactory facX, ProjectorFactory facY) =>
       (x, y) => {
         if (!double.IsNaN(x)) return facX.Project(x).HslToColor();
@@ -24,5 +24,8 @@ namespace Palett.Fluos.Utils {
         if (!double.IsNaN(y)) return facY.Make(y);
         return facX.MakeDefault();
       };
+    
   }
+
+
 }

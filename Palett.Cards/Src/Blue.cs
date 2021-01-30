@@ -1,4 +1,4 @@
-using Palett.Utils.Types;
+using Palett.Types;
 
 namespace Palett.Cards {
   public static partial class CardCollection {

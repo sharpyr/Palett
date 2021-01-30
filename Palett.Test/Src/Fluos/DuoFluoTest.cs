@@ -10,7 +10,7 @@ using static Palett.Presets.PresetCollection;
 
 namespace Palett.Test.Fluos {
   [TestFixture]
-  public class FluosTests {
+  public class DuoFluoTests {
     [Test]
     public void FluoVectorTest() {
       var samples = new[] {"a", "foo", "bar", "zene", "1", "2", "3"};

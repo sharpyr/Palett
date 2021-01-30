@@ -15,9 +15,9 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="NUnit" Version="3.13.0" />
-        <PackageReference Include="Spare" Version="0.0.14" />
-        <PackageReference Include="Typen" Version="0.0.3" />
-        <PackageReference Include="Veho" Version="0.0.29" />
+        <PackageReference Include="Spare" Version="0.1.0" />
+        <PackageReference Include="Typen" Version="0.0.6" />
+        <PackageReference Include="Veho" Version="0.1.1" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />
@@ -26,5 +26,9 @@
       <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj" />
       <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj" />
       <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
+        <ProjectReference Include="..\Palett.Types\Palett.Types.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Microsoft.VisualBasic" />
     </ItemGroup>
 </Project>

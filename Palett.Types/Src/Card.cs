@@ -1,4 +1,4 @@
-﻿namespace Palett.Utils.Types {
+﻿namespace Palett.Types {
   public class Card {
     public string Basis;
     public string Lighten5;

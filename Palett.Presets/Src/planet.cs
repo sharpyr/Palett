@@ -1,4 +1,4 @@
-using Palett.Utils.Types;
+using Palett.Types;
 using static Palett.Cards.CardCollection;
 
 namespace Palett.Presets {
