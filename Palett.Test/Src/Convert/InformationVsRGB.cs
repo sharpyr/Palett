@@ -13,7 +13,7 @@ namespace Palett.Test.Convert {
       foreach (var kv in AssetCollection.ITermColorDict) {
         var dye = DyeFactory.Rgb();
         var rgb = kv.Value.ColorToRgb();
-        $"{dye.Render(rgb, kv.Key)} {Information.RGB()}".Logger();
+        $"{dye.Render(rgb, kv.Key)} Information.RGB {Information.RGB(rgb.r, rgb.g, rgb.b)} RGB {rgb.RgbToInt()}".Logger();
       }
     }
   }
