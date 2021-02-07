@@ -4,12 +4,13 @@ using Microsoft.VisualBasic;
 using NUnit.Framework;
 using Palett.Convert;
 using Palett.Dye;
+using Palett.Presets;
 using Palett.Test.Assets;
 using Spare.Deco;
 using Spare.Logger;
 using Veho.Matrix.Rows;
 using Veho.Types;
-using static Palett.Presets.PresetCollection;
+
 
 namespace Palett.Test.Convert {
   public static class Funcs {
@@ -36,7 +37,7 @@ namespace Palett.Test.Convert {
           return new object[] {dye.Render(rgb, kv.Key), rgb, vbInt, localVbInt, localInt};
         }
       ).ToArray().RowsToMatrix();
-      matrix.Deco(presets: (Subtle, Ocean), orient: Operated.Columnwise).Logger();
+      matrix.Deco(presets: (PresetCollection.Subtle, PresetCollection.Ocean), orient: Operated.Columnwise).Logger();
     }
   }
 }

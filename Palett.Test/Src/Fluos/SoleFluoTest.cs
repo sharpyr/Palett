@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Palett.Convert;
 using Palett.Fluos;
 using Palett.Fluos.Matrix;
@@ -8,7 +7,6 @@ using Spare.Logger;
 using Typen.Literal;
 using Veho.Matrix;
 using Veho.Types;
-using Veho.Tuple;
 using static Palett.Presets.PresetCollection;
 
 namespace Palett.Test.Fluos {
