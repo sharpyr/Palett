@@ -17,10 +17,9 @@ namespace Palett.Convert {
     //   return (GenericMath<T>.Add(max, min), GenericMath<T>.Subtract(max, min), pos);
     // }
 
-    public static (float, float, int) SumDifPos(float x, float y, float z) {
+    public static (float sum, float dif, int pos) SumDifPos(float x, float y, float z) {
       var (max, min, pos) = (x, x, 1);
-      if (y > x) { (max, pos) = (y, 2); }
-      else { min = y; }
+      if (y > x) { (max, pos) = (y, 2); } else { min = y; }
       if (z > max) { (max, pos) = (z, 3); }
       if (z < min) { min = z; }
       float sum = max + min, dif = max - min;
