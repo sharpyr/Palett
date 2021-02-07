@@ -14,6 +14,8 @@
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Fluos.DuoFluoTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.InformationVsRGB.Test&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.InformationVsRGB&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.PalettConvertTests.RgbToIntToRgbTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.PalettConvertTests.ByteAndIntPropertiesTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e935b46d_002Dca89_002D4694_002D8e5e_002D89828809cfc1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ConvertTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

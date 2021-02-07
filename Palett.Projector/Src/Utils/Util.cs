@@ -6,8 +6,7 @@ using HSL = System.ValueTuple<float, float, float>;
 
 namespace Palett.Projector.Utils {
   public static class Util {
-    public static (TO, TO, TO) Map<T, TO>(this (T x, T y, T z) t, Func<T, TO> f) => (f(t.x), f(t.y), f(t.z));
-    public static (TO, TO) Map<T, TO>(this (T x, T y) t, Func<T, TO> f) => (f(t.x), f(t.y));
+    // public static (TO, TO) Map<T, TO>(this (T x, T y) t, Func<T, TO> f) => (f(t.x), f(t.y));
 
     public static Func<string, string> PresetToFlat(this Preset preset, params Effect[] effects) =>
       DyeFactory.Hex(effects).Make(preset.Na);

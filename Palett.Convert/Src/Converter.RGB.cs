@@ -5,7 +5,8 @@ using RGB = System.ValueTuple<byte, byte, byte>;
 
 namespace Palett.Convert {
   public static partial class Converter {
-    public static int RgbToInt(this (byte r, byte g, byte b) c) => ((c.r & 0xFF) << 16) + ((c.g & 0xFF) << 8) + (c.b & 0xFF);
+    // ((c.r & 0xFF) << 16) + ((c.g & 0xFF) << 8) + (c.b & 0xFF)
+    public static int RgbToInt(this (byte r, byte g, byte b) c) => c.r << 16 | c.g << 8 | c.b;
     public static string RgbToHex(this RGB rgb) => "#" + RgbToInt(rgb).ToString("X6");
     public static (float h, float s, float l) RgbToHsl(this (byte r, byte g, byte b) c) {
       const float THOUSAND = 1000;

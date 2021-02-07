@@ -5,7 +5,7 @@ using Palett.Convert;
 
 namespace Palett.Test.Assets {
   public static class AssetCollection {
-    public static Dictionary<String, Color> ITermColorDict = new Dictionary<string, Color> {
+    public static Dictionary<string, Color> ITermColorDict = new Dictionary<string, Color> {
       {"background", Converter.HexToColor("#101421")},
       {"foreground", Converter.HexToColor("#fffbf6")},
       {"normal-black", Converter.HexToColor("#2e2e2e")},
@@ -25,7 +25,7 @@ namespace Palett.Test.Assets {
       {"bright-cyan", Converter.HexToColor("#99faf2")},
       {"bright-white", Converter.HexToColor("#ffffff")},
     };
-    public static Dictionary<String, Color> ConsoleColorDict = new Dictionary<String, Color> {
+    public static Dictionary<string, Color> ConsoleColorDict = new Dictionary<string, Color> {
       {"Black", Color.FromArgb(0, 0, 0)},
       {"Red", Color.FromArgb(255, 0, 0)},
       {"Green", Color.FromArgb(0, 255, 0)},
@@ -35,7 +35,7 @@ namespace Palett.Test.Assets {
       {"Cyan", Color.FromArgb(0, 255, 255)},
       {"White", Color.FromArgb(255, 255, 255)},
     };
-    public static Dictionary<String, Color> SplendidColorDict = new Dictionary<String, Color> {
+    public static Dictionary<string, Color> SplendidColorDict = new Dictionary<string, Color> {
       {"White", Color.White},
       {"Black", Color.Black},
       {"Red", Color.FromArgb(197, 0, 23)},
