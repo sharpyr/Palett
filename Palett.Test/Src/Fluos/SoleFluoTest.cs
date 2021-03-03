@@ -34,7 +34,7 @@ namespace Palett.Test.Fluos {
       // $"X [vec] {veX.Deco()} [bound] {bdX}".Logger();
       // $"Y [vec] {veY.Deco()} [bound] {bdY}".Logger();
       samples.FluoPoints(Planet).Deco().Logger();
-      samples.FluoPointsColor(Planet).Map(x => x?.ColorToHsl().ToStr() ?? "null").Deco().Logger();
+      samples.FluoPointsColor(Planet).Map(x => x?.ColorToHsl().ToString() ?? "null").Deco().Logger();
     }
 
     [Test]

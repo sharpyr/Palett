@@ -27,5 +27,6 @@
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Fluos.FluosTests.FluoMatrixTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Fluos.SoleFluoTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.InformationVsRGB.Test&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Fluos.DuoFluoTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
