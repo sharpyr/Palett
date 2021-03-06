@@ -15,13 +15,13 @@ namespace Palett.Fluos.Matrix {
     public static Color?[][] FluoRowsColor<T>(this T[,] mat, Preset preset) => mat
       .MapRows(row => row.FluoColor(preset));
     
-    public static string[][] FluoRows<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) => mat
+    public static string[][] FluoRows<T>(this T[,] mat, (Preset str, Preset num) presets, params Effect[] effects) => mat
       .MapRows(row => row.Fluo(presets, effects));
 
-    public static Func<string, string>[][] FluoRowsMake<T>(this T[,] mat, (Preset, Preset) presets, params Effect[] effects) => mat
+    public static Func<string, string>[][] FluoRowsMake<T>(this T[,] mat, (Preset str, Preset num) presets, params Effect[] effects) => mat
       .MapRows(row => row.FluoMake(presets, effects));
 
-    public static Color?[][] FluoRowsColor<T>(this T[,] mat, (Preset, Preset) presets) => mat
+    public static Color?[][] FluoRowsColor<T>(this T[,] mat, (Preset str, Preset num) presets) => mat
       .MapRows(row => row.FluoColor(presets));
   }
 }

@@ -36,7 +36,7 @@ namespace Palett.Fluos {
       }
     }
     
-    public static string[,] Fluo<T>(this T[,] vec, Operated operated, (Preset, Preset) presets, params Effect[] effects) {
+    public static string[,] Fluo<T>(this T[,] vec, Operated operated, (Preset str, Preset num) presets, params Effect[] effects) {
       switch (operated) {
         case Operated.Pointwise: return vec.FluoPoints(presets, effects);
         case Operated.Rowwise: return vec.FluoRows(presets, effects).RowsToMatrix();
@@ -45,7 +45,7 @@ namespace Palett.Fluos {
       }
     }
 
-    public static Func<string, string>[,] FluoMake<T>(this T[,] vec, Operated operated, (Preset, Preset) presets, params Effect[] effects) {
+    public static Func<string, string>[,] FluoMake<T>(this T[,] vec, Operated operated, (Preset str, Preset num) presets, params Effect[] effects) {
       switch (operated) {
         case Operated.Pointwise: return vec.FluoPointsMake(presets, effects);
         case Operated.Rowwise: return vec.FluoRowsMake(presets, effects).RowsToMatrix();
@@ -54,7 +54,7 @@ namespace Palett.Fluos {
       }
     }
 
-    public static Color?[,] FluoColor<T>(this T[,] vec, Operated operated, (Preset, Preset) presets) {
+    public static Color?[,] FluoColor<T>(this T[,] vec, Operated operated, (Preset str, Preset num) presets) {
       switch (operated) {
         case Operated.Pointwise: return vec.FluoPointsColor(presets);
         case Operated.Rowwise: return vec.FluoRowsColor(presets).RowsToMatrix();

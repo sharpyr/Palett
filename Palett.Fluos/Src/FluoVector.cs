@@ -24,23 +24,23 @@ namespace Palett.Fluos {
       return body.Map(ProjectorMapperFactory.ColorMapper(fac));
     }
     
-    public static string[] Fluo<T>(this T[] vec, (Preset, Preset) presets, params Effect[] effects) {
+    public static string[] Fluo<T>(this T[] vec, (Preset str, Preset num) presets, params Effect[] effects) {
       var texts = vec.Map(Conv.ToStr);
       var ((vecX, facX), (vecY, facY)) = texts.MakeProjector(presets, effects);
       return ProjectorZipperFactory.RenderZipper(facX, facY).Zipper(vecX, vecY, texts);
     }
-    public static Func<string, string>[] FluoMake<T>(this T[] vec, (Preset, Preset) presets, params Effect[] effects) {
+    public static Func<string, string>[] FluoMake<T>(this T[] vec, (Preset str, Preset num) presets, params Effect[] effects) {
       var ((vecX, facX), (vecY, facY)) = vec.MakeProjector(presets, effects);
       return ProjectorZipperFactory.MakerZipper(facX, facY).Zipper(vecX, vecY);
     }
-    public static Color?[] FluoColor<T>(this T[] vec, (Preset, Preset) presets, params Effect[] effects) {
+    public static Color?[] FluoColor<T>(this T[] vec, (Preset str, Preset num) presets, params Effect[] effects) {
       var ((vecX, facX), (vecY, facY)) = vec.MakeProjector(presets, effects);
       return ProjectorZipperFactory.ColorZipper(facX, facY).Zipper(vecX, vecY);
     }
 
     private static ((double[], ProjectorFactory), (double[], ProjectorFactory)) MakeProjector<T>(
       this T[] vec,
-      (Preset, Preset) presets,
+      (Preset str, Preset num) presets,
       params Effect[] effects
     ) {
       var (preX, preY) = presets;
