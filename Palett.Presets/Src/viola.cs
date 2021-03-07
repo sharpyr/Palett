@@ -1,8 +1,8 @@
 using Palett.Types;
-using static Palett.Cards.CardCollection;
+using static Palett.Cards;
 
-namespace Palett.Presets {
-  public static partial class PresetCollection {
+namespace Palett {
+  public static partial class Presets {
     public static Preset Viola = new Preset {
       Max = Pink.Lighten4,
       Min = DeepPurple.Accent2,

@@ -4,10 +4,9 @@ using Palett.Fluos;
 using Palett.Fluos.Matrix;
 using Spare.Deco;
 using Spare.Logger;
-using Typen.Literal;
 using Veho.Matrix;
 using Veho.Types;
-using static Palett.Presets.PresetCollection;
+using static Palett.Presets;
 
 namespace Palett.Test.Fluos {
   [TestFixture]

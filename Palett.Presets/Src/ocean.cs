@@ -1,8 +1,8 @@
-using Palett.Types;
-using static Palett.Cards.CardCollection;
+using Palett.Types; 
+using static Palett.Cards;
 
-namespace Palett.Presets {
-  public static partial class PresetCollection {
+namespace Palett {
+  public static partial class Presets {
     public static Preset Ocean = new Preset {
       Max = LightBlue.Accent2,
       Min = Indigo.Basis,

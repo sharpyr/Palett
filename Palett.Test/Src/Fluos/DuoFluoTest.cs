@@ -5,7 +5,7 @@ using Palett.Fluos.Matrix;
 using Spare.Deco;
 using Spare.Logger;
 using Veho.Types;
-using static Palett.Presets.PresetCollection;
+using static Palett.Presets;
 
 namespace Palett.Test.Fluos {
   [TestFixture]

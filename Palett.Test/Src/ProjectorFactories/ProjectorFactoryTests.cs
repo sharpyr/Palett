@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using NUnit.Framework;
-using Palett.Presets;
 using Palett.Projector;
 using Palett.Types;
 
@@ -11,7 +10,7 @@ namespace Palett.Test.ProjectorFactories {
     [Test]
     public void Test() {
       var bound = (0, 5);
-      var preset = PresetCollection.Fresh;
+      var preset = Presets.Fresh;
       var effects = new Effect[] { };
       var factory = ProjectorFactory.Build(bound, preset, effects);
       foreach (var i in Enumerable.Range(0, 5)) {

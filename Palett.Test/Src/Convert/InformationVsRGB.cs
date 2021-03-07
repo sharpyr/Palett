@@ -4,7 +4,6 @@ using Microsoft.VisualBasic;
 using NUnit.Framework;
 using Palett.Convert;
 using Palett.Dye;
-using Palett.Presets;
 using Palett.Test.Assets;
 using Spare.Deco;
 using Spare.Logger;
@@ -37,7 +36,7 @@ namespace Palett.Test.Convert {
           return new object[] {dye.Render(rgb, kv.Key), rgb, vbInt, localVbInt, localInt};
         }
       ).ToArray().RowsToMatrix();
-      matrix.Deco(presets: (PresetCollection.Subtle, PresetCollection.Ocean), orient: Operated.Columnwise).Logger();
+      matrix.Deco(presets: (Presets.Subtle, Presets.Ocean), orient: Operated.Columnwise).Logger();
     }
   }
 }

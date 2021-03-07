@@ -1,8 +1,8 @@
-using Palett.Types;
-using static Palett.Cards.CardCollection;
+using Palett.Types; 
+using static Palett.Cards;
 
-namespace Palett.Presets {
-  public static partial class PresetCollection {
+namespace Palett {
+  public static partial class Presets {
     public static Preset Subtle = new Preset {
       Max = Grey.Lighten5,
       Min = Grey.Darken1,
