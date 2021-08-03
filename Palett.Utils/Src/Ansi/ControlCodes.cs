@@ -5,6 +5,5 @@ namespace Palett.Utils.Ansi {
     public const string L = "\u001b[";
     public const string R = "m";
     public const string SC = ";";
-
   }
 }

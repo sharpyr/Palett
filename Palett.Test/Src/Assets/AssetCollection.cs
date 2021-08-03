@@ -35,6 +35,8 @@ namespace Palett.Test.Assets {
       {"White", Color.FromArgb(255, 255, 255)},
     };
     public static Dictionary<string, Color> SplendidColorDict = new Dictionary<string, Color> {
+      {"Empty", Color.Empty},
+      {"Transparent", Color.Transparent},
       {"White", Color.White},
       {"Black", Color.Black},
       {"Red", Color.FromArgb(197, 0, 23)},
