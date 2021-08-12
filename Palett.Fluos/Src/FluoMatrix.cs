@@ -2,8 +2,8 @@
 using System.Drawing;
 using Palett.Fluos.Matrix;
 using Palett.Types;
-using Veho.Matrix.Columns;
-using Veho.Matrix.Rows;
+using Veho.Columns;
+using Veho.Rows;
 using Veho.Types;
 
 namespace Palett.Fluos {

@@ -7,7 +7,7 @@ using Palett.Test.Assets;
 using Palett.Types;
 using Spare.Deco;
 using Spare.Logger;
-using Veho.Matrix.Rows;
+using Veho.Rows;
 using Veho.Tuple;
 using RGB = System.ValueTuple<byte, byte, byte>;
 using HSL = System.ValueTuple<float, float, float>;

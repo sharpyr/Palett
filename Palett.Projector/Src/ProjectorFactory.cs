@@ -3,8 +3,8 @@ using Palett.Convert;
 using Palett.Dye;
 using Palett.Projector.Utils;
 using Palett.Types;
-using Typen;
 using Veho.Tuple;
+using Typen;
 using HSL = System.ValueTuple<float, float, float>;
 
 namespace Palett.Projector {

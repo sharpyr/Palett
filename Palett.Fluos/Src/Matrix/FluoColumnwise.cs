@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using Palett.Types;
-using Veho.Matrix.Columns;
+using Veho.Columns;
 
 namespace Palett.Fluos.Matrix {
   public static class FluoColumnwise {
