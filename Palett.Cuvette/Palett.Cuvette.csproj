@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageVersion>0.1.14</PackageVersion>
-    <Title>Palett.Presets</Title>
-    <Description>Color presets collection</Description>
+    <Title>Palett.Cuvette</Title>
+    <Description>Color conversion</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
@@ -15,7 +15,10 @@
     <RootNamespace>Palett</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Cards\Palett.Cards.csproj"/>
     <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
+    <ProjectReference Include="..\Palett.Types\Palett.Types.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Veho.Enumerable" Version="0.2.10"/>
   </ItemGroup>
 </Project>

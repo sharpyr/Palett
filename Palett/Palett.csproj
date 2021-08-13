@@ -2,15 +2,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.1.13</PackageVersion>
+    <PackageVersion>0.1.14</PackageVersion>
     <Title>Palett.Cards</Title>
     <Description>C# color toolset</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.1.13</AssemblyVersion>
-    <FileVersion>0.1.13</FileVersion>
+    <AssemblyVersion>0.1.14</AssemblyVersion>
+    <FileVersion>0.1.14</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
