@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Diagnostics;
+using System.Drawing;
 using HSL = System.ValueTuple<float, float, float>;
 using RGB = System.ValueTuple<byte, byte, byte>;
 using static System.Convert;

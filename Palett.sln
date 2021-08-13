@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett", "Palett\Palett.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Types", "Palett.Types\Palett.Types.csproj", "{D337636D-97AC-4353-A7DD-3A52C4AEBD88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Cuvette", "Palett.Cuvette\Palett.Cuvette.csproj", "{BF85F1D4-CF99-487A-80F1-7A1C76A5A0BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palett.Munsell", "Palett.Munsell\Palett.Munsell.csproj", "{BF85F1D4-CF99-487A-80F1-7A1C76A5A0BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
