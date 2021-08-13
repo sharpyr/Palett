@@ -16,7 +16,8 @@ namespace Palett {
       return r + g + b;
     }
     public static float Distance(this float ha, float hb) {
-      return Min(Abs(ha - hb), Abs(360 - (ha + hb)));
+      var abs = Abs(ha - hb);
+      return Min(abs, Abs(360 - abs));
     }
     public static float Distance(this HSL hsl, HSL sub) {
       var (h, s, l) = hsl.Relative(sub);
