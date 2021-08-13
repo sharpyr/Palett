@@ -5,7 +5,7 @@ using Palett.Convert;
 using Palett.Dye;
 using Palett.Test.Assets;
 using Palett.Types;
-using Spare.Deco;
+using Spare;
 using Spare.Logger;
 using Veho.Rows;
 using Veho.Tuple;

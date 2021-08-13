@@ -15,7 +15,7 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="NUnit" Version="3.13.2" />
-        <PackageReference Include="Spare" Version="0.1.6" />
+        <PackageReference Include="Spare" Version="0.1.7" />
         <PackageReference Include="Typen" Version="0.0.10" />
         <PackageReference Include="Veho" Version="0.2.10" />
     </ItemGroup>

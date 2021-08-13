@@ -2,7 +2,7 @@
 using Palett.Convert;
 using Palett.Fluos;
 using Palett.Fluos.Matrix;
-using Spare.Deco;
+using Spare;
 using Spare.Logger;
 using Veho.Matrix;
 using Veho.Types;

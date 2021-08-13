@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Palett.Fluos;
 using Palett.Fluos.Matrix;
-using Spare.Deco;
+using Spare;
 using Spare.Logger;
 using Veho.Types;
 using static Palett.Presets;
