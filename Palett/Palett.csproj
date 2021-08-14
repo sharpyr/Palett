@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.1.16</PackageVersion>
+    <PackageVersion>0.1.17</PackageVersion>
     <Title>Palett.Cards</Title>
     <Description>C# color toolset</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.1.16</AssemblyVersion>
-    <FileVersion>0.1.16</FileVersion>
+    <AssemblyVersion>0.1.17</AssemblyVersion>
+    <FileVersion>0.1.17</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Cards\Palett.Cards.csproj" />
-    <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />
-    <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj" />
-    <ProjectReference Include="..\Palett.Fluos\Palett.Fluos.csproj" />
-    <ProjectReference Include="..\Palett.Munsell\Palett.Munsell.csproj" />
-    <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj" />
-    <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj" />
-    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
+    <ProjectReference Include="..\Palett.Cards\Palett.Cards.csproj"/>
+    <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj"/>
+    <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj"/>
+    <ProjectReference Include="..\Palett.Fluos\Palett.Fluos.csproj"/>
+    <ProjectReference Include="..\Palett.Munsell\Palett.Munsell.csproj"/>
+    <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj"/>
+    <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj"/>
+    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
   </ItemGroup>
 </Project>
