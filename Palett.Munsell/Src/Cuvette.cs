@@ -31,7 +31,7 @@ namespace Palett {
              .ToList();
     }
 
-    public static List<(string hex, string name)> Approximates(RGB rgb, int top) {
+    public static List<(string hex, string name)> Approximates(this RGB rgb, int top) {
       List<(string hex, int len)> distances = HexToRgb.Map(kvp => (kvp.hex, kvp.rgb.Distance(rgb)))
                                                       .ToList();
       distances.Sort((a, b) => a.len - b.len);
@@ -40,7 +40,7 @@ namespace Palett {
              .Map(x => (x.hex, Pavtone.HexToName[x.hex]))
              .ToList();
     }
-    public static List<(string hex, string name)> Approximates(HSL hsl, int top) {
+    public static List<(string hex, string name)> Approximates(this HSL hsl, int top) {
       List<(string hex, float len)> distances = HexToHsl.Map(kvp => (kvp.hex, (kvp.hsl.Distance(hsl))))
                                                         .ToList();
       distances.Sort((a, b) => a.len >= b.len ? 1 : -1);
@@ -50,13 +50,13 @@ namespace Palett {
              .ToList();
     }
 
-    public static List<(string hex, string name)> Approximates(RGB rgb, RGB epsilon) {
+    public static List<(string hex, string name)> Approximates(this RGB rgb, RGB epsilon) {
       var distances = HexToRgb.FindAll(entry => entry.rgb.AlmostEqual(rgb, epsilon));
       return distances
              .Map(x => (x.hex, Pavtone.HexToName[x.hex]))
              .ToList();
     }
-    public static List<(string hex, string name)> Approximates(HSL hsl, HSL epsilon) {
+    public static List<(string hex, string name)> Approximates(this HSL hsl, HSL epsilon) {
       var distances = HexToHsl.FindAll(entry => entry.hsl.AlmostEqual(hsl, epsilon));
       return distances
              .Map(x => (x.hex, Pavtone.HexToName[x.hex]))
