@@ -6,7 +6,6 @@ using Palett.Convert;
 using Palett.Dye;
 using Palett.Test.Assets;
 using Spare;
-using Spare.Logger;
 using Veho.Rows;
 using Veho.Types;
 

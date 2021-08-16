@@ -2,9 +2,8 @@
 using NUnit.Framework;
 using Palett.Convert;
 using Palett.Dye;
-using Spare;
-using Spare.Logger;
 using Veho.List;
+using Spare;
 
 namespace Palett.Test.Munsell {
   [TestFixture]
@@ -29,7 +28,7 @@ namespace Palett.Test.Munsell {
     
     [Test]
     public void ApproximatesRgbTest() {
-      var list = Cuvette.Approximates(Rgb, Top);
+      var list = Rgb.Approximates(Top);
       Console.WriteLine(Rgb);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)}")
@@ -40,7 +39,7 @@ namespace Palett.Test.Munsell {
     [Test]
     public void ApproximatesHslTest() {
       Console.WriteLine(Hsl);
-      var list = Cuvette.Approximates(Hsl, Top);
+      var list = Hsl.Approximates(Top);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Converter.HexToHsl(x.hex)})")
         .Deco()
@@ -49,7 +48,7 @@ namespace Palett.Test.Munsell {
     [Test]
     public void ApproximatesRgbTestByEpsilon() {
       Console.WriteLine(Rgb);
-      var list = Cuvette.Approximates(Rgb, EpsilonRgb);
+      var list = Rgb.Approximates(EpsilonRgb);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)}")
         .Deco()

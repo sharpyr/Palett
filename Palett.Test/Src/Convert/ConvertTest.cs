@@ -4,7 +4,7 @@ using Palett.Convert;
 using Palett.Dye;
 using Palett.Test.Assets;
 using Palett.Types;
-using Spare.Logger;
+using Spare;
 using RGB = System.ValueTuple<byte, byte, byte>;
 
 namespace Palett.Test.Convert {

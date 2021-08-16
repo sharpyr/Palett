@@ -6,7 +6,6 @@ using Palett.Dye;
 using Palett.Test.Assets;
 using Palett.Types;
 using Spare;
-using Spare.Logger;
 using Veho.Rows;
 using Veho.Tuple;
 using RGB = System.ValueTuple<byte, byte, byte>;

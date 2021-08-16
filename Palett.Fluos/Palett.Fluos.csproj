@@ -2,21 +2,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.1.18</PackageVersion>
+    <PackageVersion>0.1.19</PackageVersion>
     <Title>Palett.Fluo</Title>
     <Description>Color 1d-array and 2d-array</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.1.18</AssemblyVersion>
-    <FileVersion>0.1.18</FileVersion>
+    <AssemblyVersion>0.1.19</AssemblyVersion>
+    <FileVersion>0.1.19</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Bounds" Version="0.0.13"/>
+    <PackageReference Include="Aryth.Bounds" Version="0.0.14"/>
     <PackageReference Include="Typen" Version="0.0.12"/>
-    <PackageReference Include="Veho" Version="0.2.10"/>
+    <PackageReference Include="Veho" Version="0.2.16"/>
+    <PackageReference Include="Veho.Dictionary" Version="0.2.16"/>
+    <PackageReference Include="Veho.Enumerable" Version="0.2.16"/>
+    <PackageReference Include="Veho.Tuple" Version="0.2.16"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj"/>
