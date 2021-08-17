@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using NUnit.Framework;
-using Palett.Convert;
 using Palett.Dye;
 using Palett.Test.Assets;
 using Palett.Types;
@@ -13,7 +12,7 @@ using HSL = System.ValueTuple<float, float, float>;
 
 namespace Palett.Test.Convert {
   [TestFixture]
-  public class ColorConverterTests {
+  public class ColorConvTests {
     [Test]
     public void ColorConvertTestSplendid() {
       var dyeFac = DyeFactory.Rgb(Effect.Bold, Effect.Underline);

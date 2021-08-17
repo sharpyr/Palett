@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Palett.Convert;
 using Veho.Enumerable;
-using Veho.List;
 using RGB = System.ValueTuple<byte, byte, byte>;
 using HSL = System.ValueTuple<float, float, float>;
 using HEX_RGB = System.ValueTuple<string, System.ValueTuple<byte, byte, byte>>;
@@ -15,7 +13,7 @@ namespace Palett {
     private static List<HEX_HSL> _hexToHsl = null;
     public static List<(string hex, RGB rgb)> HexToRgb => _hexToRgb != null && _hexToRgb.Any()
       ? _hexToRgb
-      : _hexToRgb = Pavtone.HexToName.Map(kv => (kv.Key, Converter.HexToRgb(kv.Key))).ToList();
+      : _hexToRgb = Pavtone.HexToName.Map(kv => (kv.Key, Conv.HexToRgb(kv.Key))).ToList();
     public static List<(string hex, HSL hsl)> HexToHsl => _hexToHsl != null && _hexToHsl.Any()
       ? _hexToHsl
       : _hexToHsl = HexToRgb.Map(kv => (kv.hex, kv.rgb.RgbToHsl())).ToList();

@@ -3,11 +3,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Palett.Types;
 using Veho.Enumerable;
-using RGB = System.ValueTuple<byte, byte, byte>;
-using HSL = System.ValueTuple<float, float, float>;
 
-namespace Palett.Convert {
-  public static partial class Converter {
+namespace Palett {
+  public static partial class Conv {
     public static int ColorToInt(this Color color) => color.R << 16 | color.G << 8 | color.B;
     public static string ColorToHex(this Color color) => "#" + ColorToInt(color).ToString("X6");
     public static (byte r, byte g, byte b) ColorToRgb(this Color color) => (color.R, color.G, color.B);
@@ -19,7 +17,7 @@ namespace Palett.Convert {
 
     public static Color? ParseColor(string hex, Space space = Space.Rgb) {
       if (hex == null) return null;
-      if (space == Space.Hex) return HexToColor(hex);
+      if (space == Space.Hex) return Conv.HexToColor(hex);
       var vec = D3.Matches(hex).Cast<Match>().Map(x => x.Value);
       if (vec.Length == 0) return null;
       switch (space) {

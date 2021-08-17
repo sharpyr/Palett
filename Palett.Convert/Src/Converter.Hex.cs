@@ -1,10 +1,8 @@
 ﻿using System.Drawing;
-using HSL = System.ValueTuple<float, float, float>;
-using RGB = System.ValueTuple<byte, byte, byte>;
 using static System.Convert;
 
-namespace Palett.Convert {
-  public static partial class Converter {
+namespace Palett {
+  public static partial class Conv {
     public static int HexToInt(string hex) => ToInt32(hex.TrimStart('#'), 16);
     public static (byte r, byte g, byte b) HexToRgb(string hex) {
       var n = HexToInt(hex);

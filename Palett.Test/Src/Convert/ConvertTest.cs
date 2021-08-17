@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using Palett.Convert;
 using Palett.Dye;
 using Palett.Test.Assets;
 using Palett.Types;
@@ -19,7 +18,7 @@ namespace Palett.Test.Convert {
         var dye = dyeFac.Make(rgb);
         var rgbToHsl = rgb.RgbToHsl();
         var hslToHex = rgbToHsl.HslToHex();
-        var hexToRgb = Converter.HexToRgb(hslToHex);
+        var hexToRgb = Conv.HexToRgb(hslToHex);
         var rgbToInt = hexToRgb.RgbToInt();
         Console.WriteLine($"{dye(kv.Key)}: {rgb} {rgbToHsl} {hslToHex} {hexToRgb} {rgbToInt}");
       }
@@ -32,7 +31,7 @@ namespace Palett.Test.Convert {
         var rgb = kv.Value.ColorToRgb();
         var dye = dyeFac.Make(rgb);
         var val = rgb.RgbToInt();
-        var rgb2 = Converter.IntToRgb(val);
+        var rgb2 = Conv.IntToRgb(val);
         Console.WriteLine($"[{dye(kv.Key)}] {rgb} : {val} : {rgb2}");
       }
     }

@@ -15,12 +15,12 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="NUnit" Version="3.13.2" />
-        <PackageReference Include="Spare" Version="0.1.10" />
+        <PackageReference Include="Spare" Version="0.1.12" />
         <PackageReference Include="Typen" Version="0.0.12" />
-        <PackageReference Include="Veho" Version="0.2.18" />
-        <PackageReference Include="Veho.Dictionary" Version="0.2.18" />
-        <PackageReference Include="Veho.Enumerable" Version="0.2.18" />
-        <PackageReference Include="Veho.Tuple" Version="0.2.18" />
+        <PackageReference Include="Veho" Version="0.3.0" />
+        <PackageReference Include="Veho.Dictionary" Version="0.3.0" />
+        <PackageReference Include="Veho.Enumerable" Version="0.3.0" />
+        <PackageReference Include="Veho.Tuple" Version="0.3.0" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />

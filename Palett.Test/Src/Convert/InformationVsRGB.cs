@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.VisualBasic;
 using NUnit.Framework;
-using Palett.Convert;
 using Palett.Dye;
 using Palett.Test.Assets;
 using Spare;

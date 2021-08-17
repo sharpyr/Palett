@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Palett.Convert;
 using Palett.Fluos;
 using Palett.Fluos.Matrix;
 using Spare;

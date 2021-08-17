@@ -1,7 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
 using Palett.Types;
-using Palett.Convert;
 
 namespace Palett.Test.Convert {
   [TestFixture]
@@ -14,7 +13,7 @@ namespace Palett.Test.Convert {
         "()",
       };
       foreach (var text in candidates) {
-        var result = Converter.ParseColor(text, Space.Hsl);
+        var result = Conv.ParseColor(text, Space.Hsl);
         Console.WriteLine($"[Color]: {result}");
       }
     }

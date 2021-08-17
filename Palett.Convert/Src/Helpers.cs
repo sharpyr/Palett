@@ -1,7 +1,7 @@
 using System;
 
-namespace Palett.Convert {
-  public static class Utils {
+namespace Palett {
+  internal static class Hp {
     const float EPSILON = (float) 0.001;
 
     // public static (P, P, P) Map<T, P>(this (T, T, T) xyz, Func<T, P> fn) {

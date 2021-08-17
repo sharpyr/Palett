@@ -4,14 +4,12 @@ using Aryth.Bounds;
 using Palett.Fluos.Utils;
 using Palett.Projector;
 using Palett.Types;
-using Typen;
 using Veho.Matrix;
 
 namespace Palett.Fluos.Matrix {
   public static class FluoPointwise {
-    
     public static string[,] FluoPoints<T>(this T[,] mat, Preset preset, params Effect[] effects) {
-      var texts = mat.Map(Conv.ToStr);
+      var texts = mat.Map(Typen.Conv.ToStr);
       var (body, fac) = texts.MakeProjector(preset, effects);
       return body.Zip(texts, ProjectorMapperFactory.RenderMapper(fac));
     }
@@ -23,9 +21,9 @@ namespace Palett.Fluos.Matrix {
       var (body, fac) = mat.MakeProjector(preset, effects);
       return body.Map(ProjectorMapperFactory.ColorMapper(fac));
     }
-    
+
     public static string[,] FluoPoints<T>(this T[,] mat, (Preset str, Preset num) presets, params Effect[] effects) {
-      var texts = mat.Map(Conv.ToStr);
+      var texts = mat.Map(Typen.Conv.ToStr);
       var ((matX, facX), (matY, facY)) = texts.MakeProjector(presets, effects);
       return ProjectorZipperFactory.RenderZipper(facX, facY).Zipper(matX, matY, texts);
     }
@@ -49,7 +47,7 @@ namespace Palett.Fluos.Matrix {
       var facY = ProjectorFactory.Build(bdY, preY, effects);
       return ((matX, facX), (matY, facY));
     }
-    
+
     public static (double[,], ProjectorFactory) MakeProjector<T>(
       this T[,] vec,
       Preset preset,

@@ -1,10 +1,9 @@
 ﻿using System;
-using Palett.Convert;
 using Palett.Dye;
 using Palett.Projector.Utils;
 using Palett.Types;
-using Veho.Tuple;
 using Typen;
+using Veho.Tuple;
 using HSL = System.ValueTuple<float, float, float>;
 
 namespace Palett.Projector {
@@ -20,14 +19,14 @@ namespace Palett.Projector {
 
     public static ProjectorFactory Build<T>((T min, T max) bound, Preset preset, params Effect[] effects) {
       var colorLeap = preset.PresetToLeap();
-      var (min, max) = bound.Map(Conv.Cast<T, double>);
+      var (min, max) = bound.Map(Typen.Conv.Cast<T, double>);
       var dif = max - min;
       return new ProjectorFactory {
         Floor = min,
         Lever = colorLeap.dif.Div((float) dif),
         Basis = colorLeap.min,
         Factory = DyeFactory.Hsl(effects),
-        Default = Converter.HexToHsl(preset.Na),
+        Default = Conv.HexToHsl(preset.Na),
         Spaceless = dif == 0
       };
     }

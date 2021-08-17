@@ -1,9 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
-using Palett.Convert;
 using Palett.Dye;
-using Veho.List;
 using Spare;
+using Veho.Sequence;
 
 namespace Palett.Test.Munsell {
   [TestFixture]
@@ -15,7 +14,7 @@ namespace Palett.Test.Munsell {
     public readonly DyeFactory<string> Dyer = DyeFactory.Hex();
     public int Top = 15;
     public string SearchText = "\\slilac";
-    
+
     [Test]
     public void SearchTest() {
       var list = Cuvette.Search(SearchText);
@@ -25,7 +24,7 @@ namespace Palett.Test.Munsell {
         .Deco()
         .Logger();
     }
-    
+
     [Test]
     public void ApproximatesRgbTest() {
       var list = Rgb.Approximates(Top);
@@ -35,13 +34,13 @@ namespace Palett.Test.Munsell {
         .Deco()
         .Logger();
     }
-    
+
     [Test]
     public void ApproximatesHslTest() {
       Console.WriteLine(Hsl);
       var list = Hsl.Approximates(Top);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Converter.HexToHsl(x.hex)})")
+        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
         .Deco()
         .Logger();
     }
@@ -59,7 +58,7 @@ namespace Palett.Test.Munsell {
       Console.WriteLine(Hsl);
       var list = Cuvette.Approximates(Hsl, EpsilonHsl);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Converter.HexToHsl(x.hex)})")
+        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
         .Deco()
         .Logger();
     }

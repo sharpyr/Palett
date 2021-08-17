@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using Palett.Types;
 using Palett.Utils.Ansi;
 using static Palett.Utils.Ansi.ControlCodes;
@@ -8,14 +9,16 @@ using RGB = System.ValueTuple<byte, byte, byte>;
 
 namespace Palett.Dye {
   public static class DyeFactory {
-    public static DyeFactory<RGB> Rgb(params Effect[] effects) => DyeFactory<RGB>.Build(ColorToAnsi.RgbToAnsi, effects);
-    public static DyeFactory<HSL> Hsl(params Effect[] effects) => DyeFactory<HSL>.Build(ColorToAnsi.HslToAnsi, effects);
-    public static DyeFactory<string> Hex(params Effect[] effects) => DyeFactory<string>.Build(ColorToAnsi.HexToAnsi, effects);
+    public static DyeFactory<RGB> Rgb(params Effect[] effects) => DyeFactory<RGB>.Build(AnsiProjector.RgbToAnsi, effects);
+    public static DyeFactory<HSL> Hsl(params Effect[] effects) => DyeFactory<HSL>.Build(AnsiProjector.HslToAnsi, effects);
+    public static DyeFactory<string> Hex(params Effect[] effects) => DyeFactory<string>.Build(AnsiProjector.HexToAnsi, effects);
+
+    public static DyeFactory<Color> Color(params Effect[] effects) => DyeFactory<Color>.Build(AnsiProjector.ColorToAnsi, effects);
   }
 
   public class DyeFactory<T> {
-    private string _head  = "";
-    private string _tail  = "";
+    private string _head = "";
+    private string _tail = "";
     private Func<T, string> _ansi;
 
     public static DyeFactory<T> Build(Func<T, string> ansi, params Effect[] effects) =>

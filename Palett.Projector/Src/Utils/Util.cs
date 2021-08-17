@@ -1,5 +1,4 @@
 ﻿using System;
-using Palett.Convert;
 using Palett.Dye;
 using Palett.Types;
 using HSL = System.ValueTuple<float, float, float>;
@@ -12,8 +11,8 @@ namespace Palett.Projector.Utils {
       DyeFactory.Hex(effects).Make(preset.Na);
 
     public static (HSL min, HSL dif, HSL max) PresetToLeap(this Preset preset) {
-      var max = Converter.HexToHsl(preset.Max);
-      var min = Converter.HexToHsl(preset.Min);
+      var max = Conv.HexToHsl(preset.Max);
+      var min = Conv.HexToHsl(preset.Min);
       return (
         min,
         (max.Item1 - min.Item1, max.Item2 - min.Item2, max.Item3 - min.Item3),
