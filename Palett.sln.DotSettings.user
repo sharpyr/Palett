@@ -39,6 +39,7 @@
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Cuvette.CuvetteTest.FluoVectorTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Cuvette.CuvetteTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.PalettConvertTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.ColorConvTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e1932296_002Ddaee_002D4efa_002Da7ea_002D6498e028088e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FluoVectorTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
