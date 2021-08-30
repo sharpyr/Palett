@@ -1,23 +1,14 @@
 ﻿using System;
 using NUnit.Framework;
-using Palett.Dye;
 using Spare;
 using Veho.Sequence;
 
 namespace Palett.Test.Munsell {
   [TestFixture]
-  public class CuvetteTest {
-    public (byte, byte, byte) Rgb = ((byte) 203, (byte) 52, (byte) 65);
-    public (float, float, float) Hsl => Rgb.RgbToHsl();
-    public (byte, byte, byte) EpsilonRgb = ((byte) 10, (byte) 10, (byte) 10);
-    public (float, float, float) EpsilonHsl = ((float) 10, (float) 8, (float) 5);
-    public readonly DyeFactory<string> Dyer = DyeFactory.Hex();
-    public int Top = 15;
-    public string SearchText = "\\slilac";
-
+  public partial class MunsellTests {
     [Test]
     public void SearchTest() {
-      var list = Cuvette.Search(SearchText);
+      var list = Palett.Munsell.Search(SearchText);
       Console.WriteLine(Rgb);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)}")
@@ -47,7 +38,7 @@ namespace Palett.Test.Munsell {
     [Test]
     public void ApproximatesRgbTestByEpsilon() {
       Console.WriteLine(Rgb);
-      var list = Rgb.Approximates(EpsilonRgb);
+      var list = Rgb.Approximates(EpsilonRgb, Domain.Fashion);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)}")
         .Deco()
@@ -56,7 +47,7 @@ namespace Palett.Test.Munsell {
     [Test]
     public void ApproximatesHslTestByEpsilon() {
       Console.WriteLine(Hsl);
-      var list = Cuvette.Approximates(Hsl, EpsilonHsl);
+      var list = Hsl.Approximates(EpsilonHsl);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
         .Deco()
