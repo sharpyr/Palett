@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 using NUnit.Framework;
 using Spare;
 using Veho.Sequence;
@@ -8,8 +8,8 @@ namespace Palett.Test.Munsell {
   public partial class MunsellTests {
     [Test]
     public void RhodoneaFoliosTest() {
-      Console.WriteLine(Hsl);
-      var list = Hsl.RhodoneaFolios(SaturationDeviation, 3, 100);
+      Debug.Print($">> [HSL] {Hsl}");
+      var list = Hsl.RhodoneaFolios(5, Density, LightMinimum, SaturTolerance, Domain.Fashion);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
         .Deco()
@@ -18,7 +18,7 @@ namespace Palett.Test.Munsell {
 
     [Test]
     public void AnalogousTest() {
-      Console.WriteLine(Hsl);
+      Debug.Print($">> [HSL] {Hsl}");
       var list = Hsl.Analogous(-30, 12);
       list
         .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
