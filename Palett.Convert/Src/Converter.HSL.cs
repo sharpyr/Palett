@@ -13,8 +13,10 @@ namespace Palett {
         r = Hp.Hal(0, h, a, l),
         g = Hp.Hal(8, h, a, l),
         b = Hp.Hal(4, h, a, l);
-      return ((byte) (r * 0xFF), (byte) (g * 0xFF), (byte) (b * 0xFF));
+      return ((byte)(r * 0xFF), (byte)(g * 0xFF), (byte)(b * 0xFF));
     }
     public static Color HslToColor(this HSL hsl) => hsl.HslToRgb().RgbToColor();
+    public static (double r, double θ) HslToPolar(this (float h, float s, float l) hsl) => (hsl.l, hsl.h);
+    public static (float h, float s, float l) PolarToHsl(this (double r, double θ) polar, float s) => ((float)polar.θ, s, (float)polar.r);
   }
 }
