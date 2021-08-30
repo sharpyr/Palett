@@ -21,13 +21,13 @@ namespace Palett {
     public List<(string key, string val)> List => _list != null && _list.Any()
       ? _list
       : _list = Dict.Select(kv => (kv.Key, kv.Value)).ToList();
-    public List<(string hex, RGB rgb)> HexToRgb => _hexToRgb != null && _hexToRgb.Any()
+    public List<(string hex, (byte r, byte g, byte b) rgb)> HexToRgb => _hexToRgb != null && _hexToRgb.Any()
       ? _hexToRgb
       : _hexToRgb = Dict.Map(kv => (kv.Key, Conv.HexToRgb(kv.Key))).ToList();
-    public List<(string hex, HSL hsl)> HexToHsl => _hexToHsl != null && _hexToHsl.Any()
+    public List<(string hex, (float h, float s, float l) hsl)> HexToHsl => _hexToHsl != null && _hexToHsl.Any()
       ? _hexToHsl
       : _hexToHsl = HexToRgb.Map(kv => (kv.hex, kv.rgb.RgbToHsl())).ToList();
-    public List<(string hex, POLAR polar)> HexToPolar => _hexToPolar != null && _hexToPolar.Any()
+    public List<(string hex, (double r, double θ) polar)> HexToPolar => _hexToPolar != null && _hexToPolar.Any()
       ? _hexToPolar
       : _hexToPolar = HexToHsl.Map(kv => (kv.hex, kv.hsl.HslToPolar())).ToList();
 
