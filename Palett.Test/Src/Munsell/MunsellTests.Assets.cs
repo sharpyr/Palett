@@ -12,7 +12,7 @@ namespace Palett.Test.Munsell {
     public double LightMinimum = 20;
     public double Density = 0.005;
     // public double SaturationDeviation = 1;
-    public readonly DyeFactory<string> Dyer = DyeFactory.Hex();
+    public readonly Dye<string> Dyer = DyeFactory.Hex();
     public int Top = 15;
     public string SearchText = "\\slilac";
   }
