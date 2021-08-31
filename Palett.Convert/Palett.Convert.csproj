@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -15,10 +15,10 @@
     <RootNamespace>Palett</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
-    <ProjectReference Include="..\Palett.Types\Palett.Types.csproj"/>
+    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
+    <ProjectReference Include="..\Palett.Types\Palett.Types.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Veho.Enumerable" Version="0.4.2"/>
+    <PackageReference Include="Veho.Enumerable" Version="0.4.4" />
   </ItemGroup>
 </Project>

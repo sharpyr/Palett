@@ -14,15 +14,15 @@
         <IsPackable>false</IsPackable>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Analys.Deco" Version="0.1.11" />
+        <PackageReference Include="Analys.Deco" Version="0.1.12" />
         <PackageReference Include="NUnit" Version="3.13.2" />
-        <PackageReference Include="Spare" Version="0.1.18" />
+        <PackageReference Include="Spare" Version="0.1.19" />
         <PackageReference Include="Typen" Version="0.1.1" />
         <PackageReference Include="Valjoux.Strategies" Version="0.0.4" />
-        <PackageReference Include="Veho" Version="0.4.2" />
-        <PackageReference Include="Veho.Dictionary" Version="0.4.2" />
-        <PackageReference Include="Veho.Enumerable" Version="0.4.2" />
-        <PackageReference Include="Veho.Tuple" Version="0.4.2" />
+        <PackageReference Include="Veho" Version="0.4.4" />
+        <PackageReference Include="Veho.Dictionary" Version="0.4.4" />
+        <PackageReference Include="Veho.Enumerable" Version="0.4.4" />
+        <PackageReference Include="Veho.Tuple" Version="0.4.4" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Palett.Convert\Palett.Convert.csproj" />

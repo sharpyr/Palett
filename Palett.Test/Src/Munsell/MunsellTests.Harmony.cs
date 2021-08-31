@@ -11,9 +11,8 @@ namespace Palett.Test.Munsell {
       Debug.Print($">> [HSL] {Hsl}");
       var list = Hsl.RhodoneaFolios(5, Density, LightMinimum, SaturTolerance, Domain.Fashion);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
-        .Deco()
-        .Logger();
+        .DecoPalett()
+        .Says("RhodoneaFolios");
     }
 
     [Test]
@@ -21,9 +20,8 @@ namespace Palett.Test.Munsell {
       Debug.Print($">> [HSL] {Hsl}");
       var list = Hsl.Analogous(-30, 12);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
-        .Deco()
-        .Logger();
+        .DecoPalett()
+        .Says("Analogous");
     }
   }
 }

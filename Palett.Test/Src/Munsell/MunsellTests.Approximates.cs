@@ -11,8 +11,7 @@ namespace Palett.Test.Munsell {
       var list = Palett.Munsell.Search(SearchText);
       Console.WriteLine(Rgb);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)}")
-        .Deco()
+        .DecoPalett()
         .Logger();
     }
 
@@ -21,8 +20,7 @@ namespace Palett.Test.Munsell {
       var list = Rgb.Approximates(Top);
       Console.WriteLine(Rgb);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)}")
-        .Deco()
+        .DecoPalett()
         .Logger();
     }
 
@@ -31,8 +29,7 @@ namespace Palett.Test.Munsell {
       Console.WriteLine(Hsl);
       var list = Hsl.Approximates(Top);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
-        .Deco()
+        .DecoPalett()
         .Logger();
     }
     [Test]
@@ -40,8 +37,7 @@ namespace Palett.Test.Munsell {
       Console.WriteLine(Rgb);
       var list = Rgb.Approximates(EpsilonRgb, Domain.Fashion);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)}")
-        .Deco()
+        .DecoPalett()
         .Logger();
     }
     [Test]
@@ -49,8 +45,7 @@ namespace Palett.Test.Munsell {
       Console.WriteLine(Hsl);
       var list = Hsl.Approximates(EpsilonHsl);
       list
-        .Map(x => $"\n{x.hex}: {Dyer.Render(x.hex, x.name)} ({Conv.HexToHsl(x.hex)})")
-        .Deco()
+        .DecoPalett()
         .Logger();
     }
   }
