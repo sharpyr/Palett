@@ -11,7 +11,7 @@ namespace Palett.Projector {
     public double Floor;
     public HSL Lever;
     public HSL Basis;
-    public DyeFactory<HSL> Factory;
+    public Dye<HSL> Factory;
     public HSL Default;
     public bool Spaceless;
     public static ProjectorFactory Build<T>((T min, T max)? bound, Preset preset, params Effect[] effects) =>
