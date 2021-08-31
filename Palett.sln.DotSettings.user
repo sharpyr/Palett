@@ -75,6 +75,7 @@
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.CuvetteTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.ColorConvTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=93d1e387_002D2ac0_002D42b1_002Db525_002D8896cdbb2fe0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
