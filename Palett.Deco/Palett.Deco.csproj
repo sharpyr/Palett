@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -15,10 +15,10 @@
     <RootNamespace>Palett</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj"/>
+    <ProjectReference Include="..\Palett.Dye\Palett.Dye.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Spare.Padder" Version="0.1.19"/>
-    <PackageReference Include="Veho" Version="0.4.4"/>
+    <PackageReference Include="Spare.Padder" Version="0.1.20" />
+    <PackageReference Include="Veho" Version="0.4.7" />
   </ItemGroup>
 </Project>

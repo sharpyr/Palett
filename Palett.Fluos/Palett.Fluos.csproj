@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -14,17 +14,17 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Bounds" Version="0.1.12"/>
-    <PackageReference Include="Typen" Version="0.1.1"/>
-    <PackageReference Include="Veho" Version="0.4.4"/>
-    <PackageReference Include="Veho.Dictionary" Version="0.4.4"/>
-    <PackageReference Include="Veho.Enumerable" Version="0.4.4"/>
-    <PackageReference Include="Veho.Tuple" Version="0.4.4"/>
+    <PackageReference Include="Aryth.Bounds" Version="0.1.12" />
+    <PackageReference Include="Typen" Version="0.1.1" />
+    <PackageReference Include="Veho" Version="0.4.7" />
+    <PackageReference Include="Veho.Dictionary" Version="0.4.7" />
+    <PackageReference Include="Veho.Enumerable" Version="0.4.7" />
+    <PackageReference Include="Veho.Tuple" Version="0.4.7" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj"/>
-    <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj"/>
-    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj"/>
-    <ProjectReference Include="..\Palett.Types\Palett.Types.csproj"/>
+    <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj" />
+    <ProjectReference Include="..\Palett.Projector\Palett.Projector.csproj" />
+    <ProjectReference Include="..\Palett.Utils\Palett.Utils.csproj" />
+    <ProjectReference Include="..\Palett.Types\Palett.Types.csproj" />
   </ItemGroup>
 </Project>
