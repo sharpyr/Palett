@@ -14,9 +14,9 @@
         <IsPackable>false</IsPackable>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Analys.Deco" Version="0.1.19" />
+        <PackageReference Include="Analys.Deco" Version="0.1.22" />
         <PackageReference Include="NUnit" Version="3.13.2" />
-        <PackageReference Include="Spare" Version="0.1.24" />
+        <PackageReference Include="Spare" Version="0.1.25" />
         <PackageReference Include="Typen" Version="0.1.1" />
         <PackageReference Include="Valjoux.Strategies" Version="0.0.5" />
         <PackageReference Include="Veho" Version="0.4.13" />

@@ -1,11 +1,10 @@
 ﻿using System.Diagnostics;
 using NUnit.Framework;
 using Spare;
-using Veho.Sequence;
 
 namespace Palett.Test.Munsell {
   [TestFixture]
-  public partial class MunsellTests {
+  public partial class MunsellTests{
     [Test]
     public void RhodoneaFoliosTest() {
       Debug.Print($">> [HSL] {Hsl}");

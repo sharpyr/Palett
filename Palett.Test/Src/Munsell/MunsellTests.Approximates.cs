@@ -1,7 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
 using Spare;
-using Veho.Sequence;
 
 namespace Palett.Test.Munsell {
   [TestFixture]
