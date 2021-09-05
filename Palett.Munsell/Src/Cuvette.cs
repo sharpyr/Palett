@@ -45,7 +45,7 @@ namespace Palett {
   public static partial class Munsell {
     private static Cuvette _fashion = null;
     private static Cuvette _product = null;
-    private static Cuvette SelectCuvette(Domain domain) {
+    public static Cuvette SelectCuvette(Domain domain) {
       switch (domain) {
         case Domain.Fashion: return _fashion ?? (_fashion = Cuvette.Build(Domain.Fashion.ToPalett()));
         case Domain.Product: return _product ?? (_product = Cuvette.Build(Domain.Product.ToPalett()));
