@@ -16,7 +16,7 @@ namespace Palett {
       var (r, g, b) = rgb.Relative(sub);
       return r + g + b;
     }
-    public static float Distance(this float ha, float hb) {
+    public static float Distance(float ha, float hb) {
       var abs = Abs(ha - hb);
       return Min(abs, Abs(360 - abs));
     }
