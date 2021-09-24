@@ -9,7 +9,6 @@ using System.Diagnostics;
 using System.Linq;
 using Aryth;
 using Aryth.Polar;
-using Veho.Dictionary;
 using Veho.Enumerable;
 using Veho.Sequence;
 using static System.Math;
