@@ -20,12 +20,19 @@ namespace Palett {
       var txB = RgbDye.Render(((byte)(b * r / 255), (byte)(b * g / 255), b), $"{hex.Slice(5, 2)}");
       return "#" + txR + txG + txB;
     }
-    public static string Deco(this (float h, float s, float l) hsl) {
+    public static string Deco(this (byte r, byte g, byte b) rgb, bool dye = true) {
+      var (r, g, b) = rgb;
+      var text = $"({r:000},{g:000},{b:000})";
+      return dye ? RgbDye.Render(rgb, text) : text;
+    }
+    public static string Deco(this (float h, float s, float l) hsl, bool dye = true) {
       var (h, s, l) = hsl;
-      var txH = HslDye.Render((h, 75, 50), $"{h:000}");
-      var txS = HslDye.Render((h, 0, s), $"{s:000}");
-      var txL = HslDye.Render((h, s, l), $"{l:000}");
-      return "(" + txH + " " + txS + " " + txL + ")";
+      var text = $"({h:000},{s:000},{l:000})";
+      return dye ? HslDye.Render(hsl, text) : text;
+      // var txH = HslDye.Render((h, 75, 50), $"{h:000}");
+      // var txS = HslDye.Render((h, 0, s), $"{s:000}");
+      // var txL = HslDye.Render((h, s, l), $"{l:000}");
+      // return "(" + txH + " " + txS + " " + txL + ")";
     }
     public static string DecoPalett(this IReadOnlyList<(string hex, string name)> palett) {
       var (hexes, names) = palett.Unwind();
