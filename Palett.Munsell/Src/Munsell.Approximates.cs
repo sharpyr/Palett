@@ -10,6 +10,18 @@ using HEX_POLAR = System.ValueTuple<string, System.ValueTuple<double, double>>;
 
 namespace Palett {
   public static partial class Munsell {
+    public static (string hex, string name) Comparative(this RGB rgb, Domain domain = Domain.Product) {
+      var cuvette = Munsell.SelectCuvette(domain);
+      var (hex, _) = Veho.Sequence.Reducers.MinBy(cuvette.HexToRgb, kv => kv.rgb.Distance(rgb));
+      return (hex, cuvette[hex]);
+    }
+
+    public static (string hex, string name) Comparative(this HSL hsl, Domain domain = Domain.Product) {
+      var cuvette = Munsell.SelectCuvette(domain);
+      var (hex, _) = Veho.Sequence.Reducers.MinBy(cuvette.HexToHsl, kv => kv.hsl.Distance(hsl));
+      return (hex, cuvette[hex]);
+    }
+
     public static List<(string hex, string name)> Approximates(this RGB rgb, int top, Domain domain = Domain.Product) {
       var cuvette = Munsell.SelectCuvette(domain);
       List<(string hex, int len)> distances = cuvette
