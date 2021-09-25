@@ -10,12 +10,12 @@ using HEX_POLAR = System.ValueTuple<string, System.ValueTuple<double, double>>;
 
 namespace Palett {
   public static partial class Munsell {
-    public static (string hex, string name) Nearest(this HSL hsl, Domain domain = Domain.Product) {
+    public static (string hex, string name) Nearest(this HSL hsl, Domain domain = Domain.Fashion) {
       var cuvette = Munsell.SelectCuvette(domain);
       var (hex, _) = cuvette.HexToHsl.MinBy(kv => Distance(hsl, kv.hsl));
       return (hex, cuvette[hex]);
     }
-    public static List<(string hex, string name)> Search(string name, Domain domain = Domain.Product) {
+    public static List<(string hex, string name)> Search(string name, Domain domain = Domain.Fashion) {
       var regex = new Regex(name, RegexOptions.IgnoreCase);
       var cuvette = Munsell.SelectCuvette(domain);
       return cuvette.List
