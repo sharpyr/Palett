@@ -24,13 +24,13 @@ namespace Palett {
         }
       }
     }
-    public static List<(string hex, string name)> Analogous(this HSL hsl, double delta, int count, Domain domain = Domain.Product) {
+    public static List<(string hex, string name)> Analogous(this HSL hsl, double delta, int count, Domain domain = Domain.Fashion) {
       var cuvette = Munsell.SelectCuvette(domain);
       var (_, s, _) = hsl;
       var analogous = hsl
                       .HslToPolar()
                       .Analogous(delta, count)
-                      .Map(polar => cuvette.Nearest(polar, s))
+                      .Map(polar => cuvette.Comparative(polar, s))
                       .DistinctBy(kv => kv.hex).ToList();
       return analogous;
     }
@@ -40,7 +40,7 @@ namespace Palett {
                                                                  double density = 0.01,
                                                                  double lightMinimum = 0,
                                                                  double saturTolerance = 18,
-                                                                 Domain domain = Domain.Product) {
+                                                                 Domain domain = Domain.Fashion) {
      var cuvette = SelectCuvette(domain);
       var polarMark = rimMark.HslToPolar();
       var hexToHsl = cuvette.HexToHsl.Map(x => x); // create shallow copy
