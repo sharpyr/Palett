@@ -26,6 +26,7 @@
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.CuvetteTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTests2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTests_Comparative&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=376c96a8_002D41e6_002D466d_002Dbbd1_002Dfed4e724cc54/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -126,6 +127,8 @@
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.CuvetteTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Convert.ColorConvTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTests_Comparative.GradientTestSaturationByLightness&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D794DA99-C0AC-47AD-9A29-F1D888176BE8::.NETFramework,Version=v4.7.2::Palett.Test.Munsell.MunsellTests_Comparative&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Palett/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

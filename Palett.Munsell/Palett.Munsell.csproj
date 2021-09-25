@@ -2,15 +2,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.2.16</PackageVersion>
+    <PackageVersion>0.2.17</PackageVersion>
     <Title>Palett.Munsell</Title>
     <Description>Color conversion</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.2.16</AssemblyVersion>
-    <FileVersion>0.2.16</FileVersion>
+    <AssemblyVersion>0.2.17</AssemblyVersion>
+    <FileVersion>0.2.17</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Palett</RootNamespace>
   </PropertyGroup>
@@ -20,6 +20,7 @@
     <ProjectReference Include="..\Palett.Types\Palett.Types.csproj"/>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Analys.Crostab" Version="0.1.22"/>
     <PackageReference Include="Aryth.Math" Version="0.1.20"/>
     <PackageReference Include="Aryth.Polar" Version="0.1.20"/>
     <PackageReference Include="Veho" Version="0.4.13"/>

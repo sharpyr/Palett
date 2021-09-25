@@ -143,5 +143,33 @@ namespace Palett.Test.Munsell {
       // "\nResult".Logger();
       // result.Deco().Logger();
     }
+
+    [Test]
+    public void ComparativeStrategies() {
+      (string hex, string name) ComparativeArch(HSL hsl, Domain domain = Domain.Fashion) {
+        var cuvette = Palett.Munsell.SelectCuvette(domain);
+        var (hex, _) = cuvette.HexToHsl.MinBy(kv => kv.hsl.Distance(hsl));
+        return (hex, cuvette[hex]);
+      }
+      Debug.Print($">> [Comparative strategies]");
+      var (elapsed, result) = Valjoux.Strategies.Run(
+        (int)1000,
+        Seq.From<(string, Func<HSL, (string hex, string name)>)>(
+          ("arch", hsl => ComparativeArch(hsl)),
+          ("edge", hsl => hsl.Comparative())
+        ),
+        Seq.From(
+          ("pale-gold", Conv.HexToHsl("#BD8B69")),
+          ("jade-lime", Conv.HexToHsl("#A1CA7B")),
+          ("mineral-red", Conv.HexToHsl("#AE5459")),
+          ("like-mineral-red", Conv.HexToHsl("#AF5357"))
+        )
+      );
+      elapsed.Deco(orient: Operated.Rowwise, presets: (Presets.Subtle, Presets.Fresh)).Says("Elapsed");
+      result.Deco().Says("Result");
+      // result["mineral-red", "arch"].DecoPalett().Logger();
+      // "\nResult".Logger();
+      // result.Deco().Logger();
+    }
   }
 }
