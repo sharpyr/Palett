@@ -5,11 +5,11 @@ using RGB = System.ValueTuple<byte, byte, byte>;
 
 namespace Palett {
   public static partial class Munsell {
-    public static (byte r, byte g, byte b) Relative(this (byte r, byte g, byte b) rgb, (byte r, byte g, byte b) sub) {
-      return ((byte)Abs(rgb.r - sub.r), (byte)Abs(rgb.g - sub.g), (byte)Abs(rgb.b - sub.b));
+    public static (byte r, byte g, byte b) Relative(this (byte r, byte g, byte b) rgb, (byte r, byte g, byte b) it) {
+      return ((byte)Abs(rgb.r - it.r), (byte)Abs(rgb.g - it.g), (byte)Abs(rgb.b - it.b));
     }
-    public static (float h, float s, float l) Relative(this (float h, float s, float l) hsl, (float h, float s, float l) sub) {
-      return (Distance(hsl.h, sub.h), Abs(hsl.s - sub.s), Abs(hsl.l - sub.l));
+    public static (float h, float s, float l) Relative(this (float h, float s, float l) hsl, (float h, float s, float l) it) {
+      return (Distance(hsl.h, it.h), Abs(hsl.s - it.s), Abs(hsl.l - it.l));
     }
 
     public static int Distance(this RGB rgb, RGB sub) {
