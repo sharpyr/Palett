@@ -11,7 +11,7 @@ namespace Palett.Fluos.Matrix {
     public static Func<string, string>[][] FluoColumnsMake<T>(this T[,] mat, Preset preset, params Effect[] effects) => mat
       .MapColumns(row => row.FluoMake(preset, effects));
 
-    public static Color?[][] FluoColumnsColor<T>(this T[,] mat, Preset preset) => mat
+    public static Color[][] FluoColumnsColor<T>(this T[,] mat, Preset preset) => mat
       .MapColumns(row => row.FluoColor(preset));
 
     public static string[][] FluoColumns<T>(this T[,] mat, (Preset str, Preset num) presets, params Effect[] effects) => mat
@@ -20,7 +20,7 @@ namespace Palett.Fluos.Matrix {
     public static Func<string, string>[][] FluoColumnsMake<T>(this T[,] mat, (Preset str, Preset num) presets, params Effect[] effects) => mat
       .MapColumns(row => row.FluoMake(presets, effects));
 
-    public static Color?[][] FluoColumnsColor<T>(this T[,] mat, (Preset str, Preset num) presets) => mat
+    public static Color[][] FluoColumnsColor<T>(this T[,] mat, (Preset str, Preset num) presets) => mat
       .MapColumns(row => row.FluoColor(presets));
   }
 }

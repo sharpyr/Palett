@@ -4,11 +4,11 @@ using Palett.Projector;
 
 namespace Palett.Fluos.Utils {
   public static class ProjectorZipperFactory {
-    public static Func<double, double, Color?> ColorZipper(ProjectorFactory facX, ProjectorFactory facY) =>
+    public static Func<double, double, Color> ColorZipper(ProjectorFactory facX, ProjectorFactory facY) =>
       (x, y) => {
         if (!double.IsNaN(x)) return facX.Project(x).HslToColor();
         if (!double.IsNaN(y)) return facY.Project(y).HslToColor();
-        return null;
+        return Color.Empty;
       };
     public static Func<double, double, string, string> RenderZipper(ProjectorFactory facX, ProjectorFactory facY) =>
       (x, y, tx) => {
@@ -23,8 +23,5 @@ namespace Palett.Fluos.Utils {
         if (!double.IsNaN(y)) return facY.Make(y);
         return facX.MakeDefault();
       };
-    
   }
-
-
 }
