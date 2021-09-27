@@ -18,7 +18,7 @@ namespace Palett.Fluos {
       var (body, fac) = vec.MakeProjector(preset, effects);
       return body.Map(ProjectorMapperFactory.MakerMapper(fac));
     }
-    public static Color?[] FluoColor<T>(this IReadOnlyList<T> vec, Preset preset, params Effect[] effects) {
+    public static Color[] FluoColor<T>(this IReadOnlyList<T> vec, Preset preset, params Effect[] effects) {
       var (body, fac) = vec.MakeProjector(preset, effects);
       return body.Map(ProjectorMapperFactory.ColorMapper(fac));
     }
@@ -32,7 +32,7 @@ namespace Palett.Fluos {
       var ((vecX, facX), (vecY, facY)) = vec.MakeProjector(presets, effects);
       return ProjectorZipperFactory.MakerZipper(facX, facY).Zipper(vecX, vecY);
     }
-    public static Color?[] FluoColor<T>(this IReadOnlyList<T> vec, (Preset str, Preset num) presets, params Effect[] effects) {
+    public static Color[] FluoColor<T>(this IReadOnlyList<T> vec, (Preset str, Preset num) presets, params Effect[] effects) {
       var ((vecX, facX), (vecY, facY)) = vec.MakeProjector(presets, effects);
       return ProjectorZipperFactory.ColorZipper(facX, facY).Zipper(vecX, vecY);
     }

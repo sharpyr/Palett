@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using Palett.Dye;
+using Spare.Padder;
+using Texting;
+using Texting.Enums;
 using Veho;
 using Veho.Vector;
-using Spare.Padder;
-using Texting.Enums;
-using Texting.Joiner;
-using Texting.Slices;
 
 namespace Palett {
   public static class Decos {
@@ -38,7 +37,7 @@ namespace Palett {
       var (hexes, names) = palett.Unwind();
       Vec.MutaZip(ref names, hexes, (name, hex) => HexDye.Render(hex, name));
       names = names.RPadder(true);
-      var textEntries = hexes.Zip(names, (hex, name) => Decos.Deco(hex) + ": " + name + ", " + Conv.HexToHsl(hex).Deco());
+      var textEntries = hexes.Zip(names, (hex, name) => Deco(hex) + ": " + name + ", " + Conv.HexToHsl(hex).Deco());
       return textEntries.ContingentLines(delim: Strings.COLF, level: 1, Brac.BRK);
     }
   }

@@ -8,7 +8,6 @@ using Veho.Types;
 
 namespace Palett.Fluos {
   public static class FluoMatrix {
-    
     public static string[,] Fluo<T>(this T[,] vec, Operated operated, Preset preset, params Effect[] effects) {
       switch (operated) {
         case Operated.Pointwise: return vec.FluoPoints(preset, effects);
@@ -27,7 +26,7 @@ namespace Palett.Fluos {
       }
     }
 
-    public static Color?[,] FluoColor<T>(this T[,] vec, Operated operated, Preset preset) {
+    public static Color[,] FluoColor<T>(this T[,] vec, Operated operated, Preset preset) {
       switch (operated) {
         case Operated.Pointwise: return vec.FluoPointsColor(preset);
         case Operated.Rowwise: return vec.FluoRowsColor(preset).RowsToMatrix();
@@ -35,7 +34,7 @@ namespace Palett.Fluos {
         default: return default;
       }
     }
-    
+
     public static string[,] Fluo<T>(this T[,] vec, Operated operated, (Preset str, Preset num) presets, params Effect[] effects) {
       switch (operated) {
         case Operated.Pointwise: return vec.FluoPoints(presets, effects);
@@ -54,7 +53,7 @@ namespace Palett.Fluos {
       }
     }
 
-    public static Color?[,] FluoColor<T>(this T[,] vec, Operated operated, (Preset str, Preset num) presets) {
+    public static Color[,] FluoColor<T>(this T[,] vec, Operated operated, (Preset str, Preset num) presets) {
       switch (operated) {
         case Operated.Pointwise: return vec.FluoPointsColor(presets);
         case Operated.Rowwise: return vec.FluoRowsColor(presets).RowsToMatrix();
