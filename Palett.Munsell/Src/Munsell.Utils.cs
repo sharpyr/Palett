@@ -1,5 +1,6 @@
 ﻿using Aryth;
 using static System.Math;
+using static Aryth.Math;
 using HSL = System.ValueTuple<float, float, float>;
 using RGB = System.ValueTuple<byte, byte, byte>;
 
