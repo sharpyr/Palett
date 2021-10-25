@@ -1,57 +1,25 @@
-﻿using System;
-using Palett.Dye;
-using Palett.Projector.Utils;
-using Palett.Types;
-using Typen;
+﻿using Palett.Types;
 using Veho.Tuple;
 using HSL = System.ValueTuple<float, float, float>;
 
-namespace Palett.Projector {
-  public class ProjectorFactory {
-    public double Floor;
-    public HSL Lever;
-    public HSL Basis;
-    public Dye<HSL> Factory;
-    public HSL Default;
-    public bool Spaceless;
-    public static ProjectorFactory Build<T>((T min, T max)? bound, Preset preset, params Effect[] effects) =>
-      Build(bound ?? (default, default), preset, effects);
+namespace Palett {
+  public static class ProjectorFactory {
+    public static Projector Build<T>((T min, T max) bound, Preset preset, params Effect[] effects) {
+      return ProjectorFactory.Build(bound.Map(Typen.Conv.Cast<T, double>), preset, effects);
+    }
+    public static Projector Build((double min, double max)? bound, Preset preset, params Effect[] effects) =>
+      ProjectorFactory.Build(bound ?? (default, default), preset, effects);
 
-    public static ProjectorFactory Build<T>((T min, T max) bound, Preset preset, params Effect[] effects) {
-      var colorLeap = preset.PresetToLeap();
-      var (min, max) = bound.Map(Typen.Conv.Cast<T, double>);
-      var dif = max - min;
-      return new ProjectorFactory {
-        Floor = min,
-        Lever = colorLeap.dif.Div((float) dif),
-        Basis = colorLeap.min,
-        Factory = DyeFactory.Hsl(effects),
-        Default = Conv.HexToHsl(preset.Na),
-        Spaceless = dif == 0
-      };
+    public static Projector Build((double min, double max) bound, Preset preset, params Effect[] effects) {
+      var max = HSB.FromTuple(Conv.HexToHsl(preset.Max));
+      var min = HSB.FromTuple(Conv.HexToHsl(preset.Min));
+      return new Projector(bound, (min, max), effects) { Na = Conv.HexToHsl(preset.Na) };
     }
 
-    public string Render(double num, string text) => this.Factory.Render(this.Project(num), text);
-    public Func<string, string> Make(double num) => this.Factory.Make(this.Project(num));
-
-    public string Render<T>(T num, string text) => this.Factory.Render(this.Project(num.Cast<T, double>()), text);
-    public Func<string, string> Make<T>(T num) => this.Factory.Make(this.Project(num.Cast<T, double>()));
-
-    public HSL Project(double num) {
-      if (double.IsNaN(num)) return this.Default;
-      if (Spaceless) return this.Basis;
-      var floor = this.Floor;
-      var (leverH, leverS, leverL) = this.Lever;
-      var (basisH, basisS, basisL) = this.Basis;
-      return (
-        Util.Scale(num, floor, leverH, basisH, 360),
-        Util.Scale(num, floor, leverS, basisS, 100),
-        Util.Scale(num, floor, leverL, basisL, 100)
-      );
+    public static Projector Build((double min, double max) bound, (HSL min, HSL max) preset, params Effect[] effects) {
+      var max = HSB.FromTuple(preset.max);
+      var min = HSB.FromTuple(preset.min);
+      return new Projector(bound, (min, max), effects);
     }
-
-    public HSL Project<T>(T num) => this.Project(num.Cast<T, double>());
-
-    public Func<string, string> MakeDefault() => this.Factory.Make(this.Default);
   }
 }
