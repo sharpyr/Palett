@@ -2,7 +2,6 @@
 using System.Drawing;
 using Aryth.Bounds;
 using Palett.Fluos.Utils;
-using Palett.Projector;
 using Palett.Types;
 using Veho.Matrix;
 
@@ -36,7 +35,7 @@ namespace Palett.Fluos.Matrix {
       return ProjectorZipperFactory.ColorZipper(facX, facY).Zipper(matX, matY);
     }
 
-    public static ((double[,], ProjectorFactory), (double[,], ProjectorFactory)) MakeProjector<T>(
+    public static ((double[,], Projector), (double[,], Projector)) MakeProjector<T>(
       this T[,] mat,
       (Preset str, Preset num) presets,
       params Effect[] effects
@@ -48,14 +47,14 @@ namespace Palett.Fluos.Matrix {
       return ((matX, facX), (matY, facY));
     }
 
-    public static (double[,], ProjectorFactory) MakeProjector<T>(
+    public static (double[,], Projector) MakeProjector<T>(
       this T[,] vec,
       Preset preset,
       params Effect[] effects
     ) {
       var (vector, bound) = vec.SoleBound();
-      var projectorFactory = ProjectorFactory.Build(bound, preset, effects);
-      return (vector, projectorFactory);
+      var projector = ProjectorFactory.Build(bound, preset, effects);
+      return (vector, projector);
     }
   }
 }
