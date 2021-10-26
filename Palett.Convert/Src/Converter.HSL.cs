@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using static Palett.HSLUtil;
 using HSL = System.ValueTuple<float, float, float>;
 
 namespace Palett {
@@ -10,9 +11,9 @@ namespace Palett {
       var (h, os, ol) = hsl;
       float s = os / 100, l = ol / 100, a = s * Math.Min(l, 1 - l);
       float
-        r = Hp.Hal(0, h, a, l),
-        g = Hp.Hal(8, h, a, l),
-        b = Hp.Hal(4, h, a, l);
+        r = Hal(0, h, a, l),
+        g = Hal(8, h, a, l),
+        b = Hal(4, h, a, l);
       return ((byte)(r * 0xFF), (byte)(g * 0xFF), (byte)(b * 0xFF));
     }
     public static Color HslToColor(this HSL hsl) => hsl.HslToRgb().RgbToColor();
