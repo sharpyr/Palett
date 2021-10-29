@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using Aryth.Bounds;
 using Palett.Fluos.Utils;
-using Palett.Projector;
 using Palett.Types;
 using Veho.Vector;
 
@@ -11,45 +10,45 @@ namespace Palett.Fluos {
   public static class FluoVector {
     public static string[] Fluo<T>(this IReadOnlyList<T> vec, Preset preset, params Effect[] effects) {
       var texts = vec.Map(Typen.Conv.ToStr);
-      var (body, fac) = texts.MakeProjector(preset, effects);
-      return body.Zip(texts, ProjectorMapperFactory.RenderMapper(fac));
+      var (body, projector) = texts.MakeProjector(preset, effects);
+      return body.Zip(texts, ProjectorMapperFactory.RenderMapper(projector));
     }
     public static Func<string, string>[] FluoMake<T>(this IReadOnlyList<T> vec, Preset preset, params Effect[] effects) {
-      var (body, fac) = vec.MakeProjector(preset, effects);
-      return body.Map(ProjectorMapperFactory.MakerMapper(fac));
+      var (body, projector) = vec.MakeProjector(preset, effects);
+      return body.Map(ProjectorMapperFactory.MakerMapper(projector));
     }
     public static Color[] FluoColor<T>(this IReadOnlyList<T> vec, Preset preset, params Effect[] effects) {
-      var (body, fac) = vec.MakeProjector(preset, effects);
-      return body.Map(ProjectorMapperFactory.ColorMapper(fac));
+      var (body, projector) = vec.MakeProjector(preset, effects);
+      return body.Map(ProjectorMapperFactory.ColorMapper(projector));
     }
 
     public static string[] Fluo<T>(this IReadOnlyList<T> vec, (Preset str, Preset num) presets, params Effect[] effects) {
       var texts = vec.Map(Typen.Conv.ToStr);
-      var ((vecX, facX), (vecY, facY)) = texts.MakeProjector(presets, effects);
-      return ProjectorZipperFactory.RenderZipper(facX, facY).Zipper(vecX, vecY, texts);
+      var ((vecX, projectorX), (vecY, projectorY)) = texts.MakeProjector(presets, effects);
+      return ProjectorZipperFactory.RenderZipper(projectorX, projectorY).Zipper(vecX, vecY, texts);
     }
     public static Func<string, string>[] FluoMake<T>(this IReadOnlyList<T> vec, (Preset str, Preset num) presets, params Effect[] effects) {
-      var ((vecX, facX), (vecY, facY)) = vec.MakeProjector(presets, effects);
-      return ProjectorZipperFactory.MakerZipper(facX, facY).Zipper(vecX, vecY);
+      var ((vecX, projectorX), (vecY, projectorY)) = vec.MakeProjector(presets, effects);
+      return ProjectorZipperFactory.MakerZipper(projectorX, projectorY).Zipper(vecX, vecY);
     }
     public static Color[] FluoColor<T>(this IReadOnlyList<T> vec, (Preset str, Preset num) presets, params Effect[] effects) {
-      var ((vecX, facX), (vecY, facY)) = vec.MakeProjector(presets, effects);
-      return ProjectorZipperFactory.ColorZipper(facX, facY).Zipper(vecX, vecY);
+      var ((vecX, projectorX), (vecY, projectorY)) = vec.MakeProjector(presets, effects);
+      return ProjectorZipperFactory.ColorZipper(projectorX, projectorY).Zipper(vecX, vecY);
     }
 
-    private static ((double[], ProjectorFactory), (double[], ProjectorFactory)) MakeProjector<T>(
+    private static ((double[], Projector), (double[], Projector)) MakeProjector<T>(
       this IReadOnlyList<T> vec,
       (Preset str, Preset num) presets,
       params Effect[] effects
     ) {
       var (preX, preY) = presets;
       var ((vecX, bdX), (vecY, bdY)) = vec.DuoBound();
-      var facX = ProjectorFactory.Build(bdX, preX, effects);
-      var facY = ProjectorFactory.Build(bdY, preY, effects);
-      return ((vecX, facX), (vecY, facY));
+      var projectorX = ProjectorFactory.Build(bdX, preX, effects);
+      var projectorY = ProjectorFactory.Build(bdY, preY, effects);
+      return ((vecX, projectorX), (vecY, projectorY));
     }
 
-    public static (double[], ProjectorFactory) MakeProjector<T>(
+    public static (double[], Projector) MakeProjector<T>(
       this IReadOnlyList<T> vec,
       Preset preset,
       params Effect[] effects
