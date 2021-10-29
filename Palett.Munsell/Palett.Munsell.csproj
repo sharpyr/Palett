@@ -2,15 +2,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.4.4</PackageVersion>
+    <PackageVersion>0.4.8</PackageVersion>
     <Title>Palett.Munsell</Title>
     <Description>Color conversion</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.4.4</AssemblyVersion>
-    <FileVersion>0.4.4</FileVersion>
+    <AssemblyVersion>0.4.8</AssemblyVersion>
+    <FileVersion>0.4.8</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Palett</RootNamespace>
   </PropertyGroup>
@@ -20,9 +20,9 @@
     <ProjectReference Include="..\Palett.Types\Palett.Types.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Analys.Crostab" Version="0.2.6"/>
-    <PackageReference Include="Aryth.Math" Version="0.2.11"/>
-    <PackageReference Include="Aryth.Polar" Version="0.2.11"/>
+    <PackageReference Include="Analys.Crostab" Version="0.2.7"/>
+    <PackageReference Include="Aryth.Math" Version="0.2.21"/>
+    <PackageReference Include="Aryth.Polar" Version="0.2.21"/>
     <PackageReference Include="Veho" Version="0.5.10"/>
     <PackageReference Include="Veho.Dictionary" Version="0.5.10"/>
     <PackageReference Include="Veho.Enumerable" Version="0.5.10"/>
