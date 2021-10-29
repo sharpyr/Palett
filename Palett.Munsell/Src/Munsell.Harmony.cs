@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Aryth;
 using Aryth.Polar;
@@ -15,15 +14,15 @@ using HEX_POLAR = System.ValueTuple<string, System.ValueTuple<double, double>>;
 
 namespace Palett {
   public static partial class Munsell {
-    public static IEnumerable<T> DistinctBy<T, TK>
-      (this IEnumerable<T> source, Func<T, TK> keySelector) {
-      var seenKeys = new HashSet<TK>();
-      foreach (var element in source) {
-        if (seenKeys.Add(keySelector(element))) {
-          yield return element;
-        }
-      }
-    }
+    // public static IEnumerable<T> DistinctBy<T, TK>
+    //   (this IEnumerable<T> source, Func<T, TK> keySelector) {
+    //   var seenKeys = new HashSet<TK>();
+    //   foreach (var element in source) {
+    //     if (seenKeys.Add(keySelector(element))) {
+    //       yield return element;
+    //     }
+    //   }
+    // }
     public static List<(string hex, string name)> Analogous(this HSL hsl, double delta, int count, Domain domain = Domain.Fashion) {
       var cuvette = Munsell.SelectCuvette(domain);
       var (_, s, _) = hsl;
@@ -41,7 +40,7 @@ namespace Palett {
                                                                  double lightMinimum = 0,
                                                                  double saturTolerance = 18,
                                                                  Domain domain = Domain.Fashion) {
-     var cuvette = SelectCuvette(domain);
+      var cuvette = SelectCuvette(domain);
       var polarMark = rimMark.HslToPolar();
       var hexToHsl = cuvette.HexToHsl.Map(x => x); // create shallow copy
       var saturInterval = (rimMark.s - saturTolerance, rimMark.s + saturTolerance);
@@ -63,10 +62,11 @@ namespace Palett {
         if (saturInterval.Has(s)) {
           petalNote.NotePhase(phase);
           sortedList.Add(HslIndicator(hsl), hex);
-        } else {
+        }
+        else {
           var dS = Abs(rimMark.s - s);
           var dR = Abs(rimMark.l - r);
-          var dθ = Distance(rimMark.h, θ);
+          var dθ = Pol.Distance(rimMark.h, θ);
           petalCache[phase].Add(dS * 100 + dR + dθ / 360, hex);
         }
         if (maximum <= petalNote.Sum) break;
