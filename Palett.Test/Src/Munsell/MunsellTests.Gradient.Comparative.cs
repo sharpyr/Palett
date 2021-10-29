@@ -10,8 +10,8 @@ namespace Palett.Test.Munsell {
   public class MunsellTests_Comparative {
     public static readonly Dye<HSL> HslDyer = DyeFactory.Hsl(Effect.Inverse);
     public static readonly Dye<string> HexDyer = DyeFactory.Hex(Effect.Inverse);
-    public static readonly HSL HslA = Conv.HexToHsl("#BCE3DF"); // Bleached Aqua
-    public static readonly HSL HSLB = Conv.HexToHsl("#379190"); // Latigo bay
+    public static readonly HSL HslA = (330, 50, 85); // Conv.HexToHsl("#BCE3DF"); // Bleached Aqua
+    public static readonly HSL HSLB = (015, 95, 45); // Conv.HexToHsl("#379190"); // Latigo bay
     public static readonly Func<int, int, HSL, string> Stringify = (x, y, hsl) => {
       Console.WriteLine($">> [dealing] {x} {y} {hsl.Deco(false)}");
       var entry = hsl.Comparative();
@@ -24,7 +24,7 @@ namespace Palett.Test.Munsell {
     public void GradientTestHueByLightness() {
       Console.WriteLine($">> [x] Hue [y] Lightness");
       Console.WriteLine($">> [a] {HslDyer.Render(HslA, HslA.Deco(false))} [b] {HslDyer.Render(HSLB, HSLB.Deco(false))}");
-      var crostab = (HslA, HSLB).GradientCrostab(HSLDimension.H, HSLDimension.L, 4, 4);
+      var crostab = (HslA, HSLB).GradientCrostab(HSLAttr.H, HSLAttr.L, 4, 4);
       var stringCrostab = crostab.Map(Stringify);
       Console.WriteLine($">> [gradient crostab]\n{stringCrostab.Deco(hasAnsi: true)}");
     }
@@ -32,7 +32,7 @@ namespace Palett.Test.Munsell {
     public void GradientTestHueBySaturation() {
       Console.WriteLine($">> [x] Hue [y] Saturation");
       Console.WriteLine($">> [a] {HslDyer.Render(HslA, HslA.Deco(false))} [b] {HslDyer.Render(HSLB, HSLB.Deco(false))}");
-      var crostab = (HslA, HSLB).GradientCrostab(HSLDimension.H, HSLDimension.S, 4, 4);
+      var crostab = (HslA, HSLB).GradientCrostab(HSLAttr.H, HSLAttr.S, 4, 4);
       var stringCrostab = crostab.Map(Stringify);
       Console.WriteLine($">> [gradient crostab]\n{stringCrostab.Deco(hasAnsi: true)}");
     }
@@ -40,7 +40,7 @@ namespace Palett.Test.Munsell {
     public void GradientTestSaturationByLightness() {
       Console.WriteLine($">> [x] Saturation [y] Lightness");
       Console.WriteLine($">> [a] {HslDyer.Render(HslA, HslA.Deco(false))} [b] {HslDyer.Render(HSLB, HSLB.Deco(false))}");
-      var crostab = (HslA, HSLB).GradientCrostab(HSLDimension.S, HSLDimension.L, 4, 6);
+      var crostab = (HslA, HSLB).GradientCrostab(HSLAttr.S, HSLAttr.L, 4, 6);
       var stringCrostab = crostab.Map(Stringify);
       Console.WriteLine($">> [gradient crostab]\n{stringCrostab.Deco(hasAnsi: true)}");
       var size = crostab.Size;
@@ -52,7 +52,7 @@ namespace Palett.Test.Munsell {
     public void GradientTestSaturationByHue() {
       Console.WriteLine($">> [x] Saturation [y] Hue");
       Console.WriteLine($">> [a] {HslDyer.Render(HslA, HslA.Deco(false))} [b] {HslDyer.Render(HSLB, HSLB.Deco(false))}");
-      var crostab = (HslA, HSLB).GradientCrostab(HSLDimension.S, HSLDimension.H, 4, 6);
+      var crostab = (HslA, HSLB).GradientCrostab(HSLAttr.S, HSLAttr.H, 4, 6);
       var stringCrostab = crostab.Map(Stringify);
       Console.WriteLine($">> [gradient crostab]\n{stringCrostab.Deco(hasAnsi: true)}");
     }
@@ -60,7 +60,7 @@ namespace Palett.Test.Munsell {
     public void GradientTestLightnessByHue() {
       Console.WriteLine($">> [x] Lightness [y] Hue");
       Console.WriteLine($">> [a] {HslDyer.Render(HslA, HslA.Deco(false))} [b] {HslDyer.Render(HSLB, HSLB.Deco(false))}");
-      var crostab = (HslA, HSLB).GradientCrostab(HSLDimension.L, HSLDimension.H, 6, 4);
+      var crostab = (HslA, HSLB).GradientCrostab(HSLAttr.L, HSLAttr.H, 6, 4);
       var stringCrostab = crostab.Map(Stringify);
       Console.WriteLine($">> [gradient crostab]\n{stringCrostab.Deco(hasAnsi: true)}");
     }
@@ -68,7 +68,7 @@ namespace Palett.Test.Munsell {
     public void GradientTestLightnessBySaturation() {
       Console.WriteLine($">> [x] Lightness [y] Saturation");
       Console.WriteLine($">> [a] {HslDyer.Render(HslA, HslA.Deco(false))} [b] {HslDyer.Render(HSLB, HSLB.Deco(false))}");
-      var crostab = (HslA, HSLB).GradientCrostab(HSLDimension.L, HSLDimension.S, 3, 3);
+      var crostab = (HslA, HSLB).GradientCrostab(HSLAttr.L, HSLAttr.S, 3, 3);
       var stringCrostab = crostab.Map(Stringify);
       Console.WriteLine($">> [gradient crostab]\n{stringCrostab.Deco(hasAnsi: true)}");
     }

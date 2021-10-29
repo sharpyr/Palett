@@ -88,7 +88,7 @@ namespace Palett.Test.Munsell {
         } else {
           var dS = Abs(rimMark.s - s);
           var dR = Abs(rimMark.l - r);
-          var dθ = Mun.Distance(rimMark.h, θ);
+          var dθ = Pol.Distance(rimMark.h, θ);
           petalCache[phase].Add(dS * 100 + dR + dθ / 360, hex);
         }
         if (maximum <= petalNote.Sum) break;

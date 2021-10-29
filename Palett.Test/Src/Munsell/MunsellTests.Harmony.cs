@@ -7,7 +7,7 @@ namespace Palett.Test.Munsell {
   public partial class MunsellTests{
     [Test]
     public void RhodoneaFoliosTest() {
-      Debug.Print($">> [HSL] {Hsl}");
+      Debug.Print($">> [HSB] {Hsl}");
       var list = Hsl.RhodoneaFolios(5, Density, LightMinimum, SaturTolerance, Domain.Fashion);
       list
         .DecoPalett()
@@ -16,7 +16,7 @@ namespace Palett.Test.Munsell {
 
     [Test]
     public void AnalogousTest() {
-      Debug.Print($">> [HSL] {Hsl}");
+      Debug.Print($">> [HSB] {Hsl}");
       var list = Hsl.Analogous(-30, 12);
       list
         .DecoPalett()
