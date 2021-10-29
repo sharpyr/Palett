@@ -1,5 +1,5 @@
 ﻿namespace Palett.Types {
-  public enum HSLDimension {
+  public enum HSLAttr {
     H,
     S,
     L
