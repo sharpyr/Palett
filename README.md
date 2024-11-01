@@ -1,16 +1,16 @@
 <p align="center">
   <a href="https://github.com/sharpyr/Palett">
-    <img src="../media/palett-banner.svg" />
+    <img src="./media/palett-banner.svg" />
   </a>
-  <p align="center"> Color space system </p>
+  <p align="center"> Color space tools </p>
 </p>
 
 [![Version](https://img.shields.io/nuget/vpre/Palett.svg)](https://www.nuget.org/packages/Palett)
 [![Downloads](https://img.shields.io/nuget/dt/Palett.svg)](https://www.nuget.org/packages/Palett)
-[![License](https://img.shields.io/github/license/sharpyr/Palett.svg)](https://github.com/sharpyr/Palett/LICENSE)
+[![Dependent Libraries](https://img.shields.io/librariesio/dependents/nuget/Palett.svg?label=dependent%20libraries)](https://libraries.io/nuget/Palett)
 [![Language](https://img.shields.io/badge/language-C%23-blueviolet.svg)](https://dotnet.microsoft.com/learn/csharp)
 [![Compatibility](https://img.shields.io/badge/compatibility-.NET%20Framework%204.7.2%2B%20%7C%20.NET%20Standard%202.0-blue.svg)]()
-[![Dependent Libraries](https://img.shields.io/librariesio/dependents/nuget/Palett.svg?label=dependent%20libraries)](https://libraries.io/nuget/Palett)
+[![License](https://img.shields.io/github/license/sharpyr/Palett.svg)](https://github.com/sharpyr/Palett/LICENSE)
 
 ## Features
 
@@ -19,9 +19,9 @@
 - Applicable to styles: Bold, Italic, Underline, and Inverse.
 - Render an array or 2d-array of number into colored based on the relative value of each number.
 
-## Packages
+## Content
 
-| Package            | What it's for                                         |
+| Package            | Content                                               |
 |--------------------|-------------------------------------------------------|
 | `Palett`           | The core library, including all Palett sub projects   |
 | `Palett.Cards`     | Preset color cards with 14 degrees of color gradients |
@@ -36,7 +36,7 @@
 
 ## Install
 
-Palett is designed to work with .NET Standard 2.0.
+Palett targets .NET Standard 2.0, suitable for .NET and .NET Framework.
 
 Install [Palett package](https://www.nuget.org/packages/Palett) and its dependencies.
 
@@ -56,8 +56,9 @@ All versions can be found [on nuget](https://www.nuget.org/packages/Palett#versi
 
 ## Usage
 
-```cs
+### Convert color
 
+```csharp
 using Palett.Convert;
 // using RGB = System.ValueTuple<byte, byte, byte>;
 // using HSL = System.ValueTuple<float, float, float>;
@@ -67,9 +68,24 @@ var hsl = rgb.RgbToHsl();
 var hex = hsl.HslToHex();
 var rgb2 = Conv.HexToRgb(hex);
 var int = rgb2.RgbToInt();
-
 ```
 
-## License
+### Colorize vector
 
-Palett is licensed under the [MIT](https://github.com/sharpyr/Palett/LICENSE) license
+```csharp
+using Palett;
+using Palett.Fluos;
+
+var samples = new[] { "foo", "bar", "zen", "16", "24", "32", "64" };
+var colored = samples.Fluo(Presets.Planet);
+```
+
+# Examples
+---------------------
+Palett has a test suite in the [test project](https://github.com/sharpyr/Palett/tree/master/Palett.Test/Src).
+
+## Feedback
+
+Palett is licensed under the [MIT](https://github.com/sharpyr/Palett/LICENSE) license. 
+
+Bug report and contribution are welcome at [the GitHub repository](https://github.com/sharpyr/Palett).
