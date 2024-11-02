@@ -1,9 +1,7 @@
-<p align="center">
-  <a href="https://github.com/sharpyr/Palett">
-    <img src="./media/palett-banner.svg" />
-  </a>
-  <p align="center"> Color space tools </p>
-</p>
+
+![Banner](https://raw.githubusercontent.com/sharpyr/Palett/refs/heads/master/media/palett-banner.svg)
+
+Color space tools
 
 [![Version](https://img.shields.io/nuget/vpre/Palett.svg)](https://www.nuget.org/packages/Palett)
 [![Downloads](https://img.shields.io/nuget/dt/Palett.svg)](https://www.nuget.org/packages/Palett)
