@@ -20,7 +20,7 @@
     <ProjectReference Include="..\Palett.Types\Palett.Types.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Veho.Enumerable" Version="0.5.11"/>
+    <PackageReference Include="Veho.Enumerable" Version="0.5.13" />
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>

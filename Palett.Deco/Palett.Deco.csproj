@@ -20,7 +20,7 @@
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Spare.Padder" Version="0.2.5"/>
-    <PackageReference Include="Veho" Version="0.5.11"/>
+    <PackageReference Include="Spare.Padder" Version="0.2.6" />
+    <PackageReference Include="Veho" Version="0.5.13" />
   </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@
     <PackageIcon>palett-avatar.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Polar" Version="0.2.23"/>
+    <PackageReference Include="Aryth.Polar" Version="0.2.24" />
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>

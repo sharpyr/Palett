@@ -7,7 +7,7 @@ Color space tools
 [![Downloads](https://img.shields.io/nuget/dt/Palett.svg)](https://www.nuget.org/packages/Palett)
 [![Dependent Libraries](https://img.shields.io/librariesio/dependents/nuget/Palett.svg?label=dependent%20libraries)](https://libraries.io/nuget/Palett)
 [![Language](https://img.shields.io/badge/language-C%23-blueviolet.svg)](https://dotnet.microsoft.com/learn/csharp)
-[![Compatibility](https://img.shields.io/badge/compatibility-.NET%20Framework%204.7.2%2B%20%7C%20.NET%20Standard%202.0-blue.svg)]()
+[![Compatibility](https://img.shields.io/badge/compatibility-.NET%20Standard%202.0-blue.svg)]()
 [![License](https://img.shields.io/github/license/sharpyr/Palett.svg)](https://github.com/sharpyr/Palett/LICENSE)
 
 ## Features

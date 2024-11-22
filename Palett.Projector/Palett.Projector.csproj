@@ -21,9 +21,9 @@
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Math" Version="0.2.23"/>
-    <PackageReference Include="Aryth.Polar" Version="0.2.23"/>
+    <PackageReference Include="Aryth.Math" Version="0.2.24" />
+    <PackageReference Include="Aryth.Polar" Version="0.2.24" />
     <PackageReference Include="Typen" Version="0.1.1"/>
-    <PackageReference Include="Veho.Tuple" Version="0.5.11"/>
+    <PackageReference Include="Veho.Tuple" Version="0.5.13" />
   </ItemGroup>
 </Project>
