@@ -15,7 +15,7 @@
     <PackageIcon>palett-avatar.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Analys.Deco" Version="0.2.11" />
+    <PackageReference Include="Analys.Deco" Version="0.2.12" />
     <PackageReference Include="NUnit" Version="4.2.2"/>
     <PackageReference Include="Spare" Version="0.2.6" />
     <PackageReference Include="Typen" Version="0.1.1"/>
