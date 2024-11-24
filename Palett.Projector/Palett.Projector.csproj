@@ -2,15 +2,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.4.14</PackageVersion>
+    <PackageVersion>0.4.15</PackageVersion>
     <Title>Palett.Projector</Title>
     <Description>Projector of dye</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.4.14</AssemblyVersion>
-    <FileVersion>0.4.14</FileVersion>
+    <AssemblyVersion>0.4.15</AssemblyVersion>
+    <FileVersion>0.4.15</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Palett</RootNamespace>
     <PackageIcon>palett-avatar.png</PackageIcon>
@@ -21,9 +21,9 @@
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Math" Version="0.2.24"/>
-    <PackageReference Include="Aryth.Polar" Version="0.2.24"/>
+    <PackageReference Include="Aryth.Math" Version="0.3.0"/>
+    <PackageReference Include="Aryth.Polar" Version="0.3.0"/>
     <PackageReference Include="Typen" Version="0.1.1"/>
-    <PackageReference Include="Veho.Tuple" Version="0.5.13"/>
+    <PackageReference Include="Veho.Tuple" Version="0.6.1"/>
   </ItemGroup>
 </Project>
