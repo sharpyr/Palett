@@ -2,25 +2,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.4.16</PackageVersion>
+    <PackageVersion>0.4.17</PackageVersion>
     <Title>Palett.Fluo</Title>
     <Description>Color 1d-array and 2d-array</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.4.16</AssemblyVersion>
-    <FileVersion>0.4.16</FileVersion>
+    <AssemblyVersion>0.4.17</AssemblyVersion>
+    <FileVersion>0.4.17</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>palett-avatar.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Bounds" Version="0.3.2"/>
+    <PackageReference Include="Aryth.Bounds" Version="0.3.3"/>
     <PackageReference Include="Typen" Version="[0.1.1,)"/>
-    <PackageReference Include="Veho" Version="0.6.1"/>
-    <PackageReference Include="Veho.Dictionary" Version="0.6.1"/>
-    <PackageReference Include="Veho.Enumerable" Version="0.6.1"/>
-    <PackageReference Include="Veho.Tuple" Version="0.6.1"/>
+    <PackageReference Include="Veho" Version="0.6.3"/>
+    <PackageReference Include="Veho.Dictionary" Version="0.6.3"/>
+    <PackageReference Include="Veho.Enumerable" Version="0.6.3"/>
+    <PackageReference Include="Veho.Tuple" Version="0.6.3"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Palett.Presets\Palett.Presets.csproj"/>

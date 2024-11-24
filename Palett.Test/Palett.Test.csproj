@@ -15,15 +15,15 @@
     <PackageIcon>palett-avatar.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Analys.Deco" Version="0.2.12" />
+    <PackageReference Include="Analys.Deco" Version="0.2.13" />
     <PackageReference Include="NUnit" Version="4.2.2"/>
-    <PackageReference Include="Spare" Version="0.2.6" />
+    <PackageReference Include="Spare" Version="0.2.7" />
     <PackageReference Include="Typen" Version="0.1.1"/>
     <PackageReference Include="Valjoux.Strategies" Version="0.1.1"/>
-    <PackageReference Include="Veho" Version="0.6.1" />
-    <PackageReference Include="Veho.Dictionary" Version="0.6.1" />
-    <PackageReference Include="Veho.Enumerable" Version="0.6.1" />
-    <PackageReference Include="Veho.Tuple" Version="0.6.1" />
+    <PackageReference Include="Veho" Version="0.6.3" />
+    <PackageReference Include="Veho.Dictionary" Version="0.6.3" />
+    <PackageReference Include="Veho.Enumerable" Version="0.6.3" />
+    <PackageReference Include="Veho.Tuple" Version="0.6.3" />
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
   <ItemGroup>
