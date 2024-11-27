@@ -2,15 +2,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.4.18</PackageVersion>
+    <PackageVersion>0.4.19</PackageVersion>
     <Title>Palett.Munsell</Title>
     <Description>Color conversion</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.4.18</AssemblyVersion>
-    <FileVersion>0.4.18</FileVersion>
+    <AssemblyVersion>0.4.19</AssemblyVersion>
+    <FileVersion>0.4.19</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Palett</RootNamespace>
     <PackageIcon>palett-avatar.png</PackageIcon>
@@ -22,12 +22,12 @@
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Analys.Crostab" Version="0.2.13"/>
-    <PackageReference Include="Aryth.Math" Version="0.3.5"/>
-    <PackageReference Include="Aryth.Polar" Version="0.3.5"/>
-    <PackageReference Include="Veho" Version="0.6.5"/>
-    <PackageReference Include="Veho.Dictionary" Version="0.6.5"/>
-    <PackageReference Include="Veho.Enumerable" Version="0.6.5"/>
-    <PackageReference Include="Veho.Tuple" Version="0.6.5"/>
+    <PackageReference Include="Analys.Crostab" Version="0.2.17"/>
+    <PackageReference Include="Aryth.Math" Version="0.3.6"/>
+    <PackageReference Include="Aryth.Polar" Version="0.3.6"/>
+    <PackageReference Include="Veho" Version="0.6.10"/>
+    <PackageReference Include="Veho.Dictionary" Version="0.6.10"/>
+    <PackageReference Include="Veho.Enumerable" Version="0.6.10"/>
+    <PackageReference Include="Veho.Tuple" Version="0.6.10"/>
   </ItemGroup>
 </Project>

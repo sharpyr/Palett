@@ -5,7 +5,7 @@ using HSL = System.ValueTuple<float, float, float>;
 namespace Palett {
   public static class ProjectorFactory {
     public static Projector Build<T>((T min, T max) bound, Preset preset, params Effect[] effects) {
-      return ProjectorFactory.Build(bound.Map(Typen.Conv.Cast<T, double>), preset, effects);
+      return ProjectorFactory.Build(bound.To(Typen.Conv.Cast<T, double>), preset, effects);
     }
     public static Projector Build((double min, double max)? bound, Preset preset, params Effect[] effects) =>
       ProjectorFactory.Build(bound ?? (default, default), preset, effects);

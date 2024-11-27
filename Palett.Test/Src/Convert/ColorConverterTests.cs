@@ -26,7 +26,7 @@ namespace Palett.Test.Convert {
         return new object[] {
           key,
           rgb,
-          colorToHsl.Map(x => Math.Round(x)),
+          colorToHsl.To(x => Math.Round(x)),
           hslToColor,
           rgbToHsl,
           hslToRgb

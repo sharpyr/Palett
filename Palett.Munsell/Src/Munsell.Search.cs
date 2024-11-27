@@ -12,7 +12,7 @@ namespace Palett {
   public static partial class Munsell {
     public static (string hex, string name) Nearest(this HSL hsl, Domain domain = Domain.Fashion) {
       var cuvette = Munsell.SelectCuvette(domain);
-      var (hex, _) = cuvette.HexToHsl.MinBy(kv => Distance(hsl, kv.hsl));
+      var (hex, _) = cuvette.HexToHsl.MinOfListBy(kv => Distance(hsl, kv.hsl));
       return (hex, cuvette[hex]);
     }
     public static List<(string hex, string name)> Search(string name, Domain domain = Domain.Fashion) {

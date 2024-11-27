@@ -32,12 +32,12 @@ namespace Palett {
       : _hexToPolar = HexToHsl.Map(kv => (kv.hex, kv.hsl.HslToPolar())).ToList();
 
     public (string hex, string name) Comparative(HSL hsl) {
-      var (hex, _) = this.HexToHsl.MinBy(kv => hsl.Distance(kv.hsl));
+      var (hex, _) = this.HexToHsl.MinOfListBy(kv => hsl.Distance(kv.hsl));
       return (hex, this[hex]);
     }
     public (string hex, string name) Comparative(POLAR polar, float s) {
       var hsl = polar.PolarToHsl(s);
-      var (hex, _) = this.HexToHsl.MinBy(kv => hsl.Distance(kv.hsl));
+      var (hex, _) = this.HexToHsl.MinOfListBy(kv => hsl.Distance(kv.hsl));
       return (hex, this[hex]);
     }
   }

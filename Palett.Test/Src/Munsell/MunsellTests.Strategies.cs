@@ -148,7 +148,7 @@ namespace Palett.Test.Munsell {
     public void ComparativeStrategies() {
       (string hex, string name) ComparativeArch(HSL hsl, Domain domain = Domain.Fashion) {
         var cuvette = Palett.Munsell.SelectCuvette(domain);
-        var (hex, _) = cuvette.HexToHsl.MinBy(kv => kv.hsl.Distance(hsl));
+        var (hex, _) = cuvette.HexToHsl.MinOfListBy(kv => kv.hsl.Distance(hsl));
         return (hex, cuvette[hex]);
       }
       Debug.Print($">> [Comparative strategies]");
