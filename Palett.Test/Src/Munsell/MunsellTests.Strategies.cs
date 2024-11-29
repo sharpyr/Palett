@@ -44,7 +44,7 @@ namespace Palett.Test.Munsell {
       var target = new List<(string hex, float θ)>(maximum);
       foreach (var (hex, (θ, s, r)) in hexToHsl.FiniteFlopper()) {
         if (r < minL) continue;
-        if (!saturInterval.Has(s)) continue;
+        if (!saturInterval.Hold(s)) continue;
         if (polarMark.FoliateRadius(θ, petals) < r) continue;
         var phase = petalNote.Phase(θ);
         if (thresholdPerPhase <= petalNote.Counter[phase]) continue;
@@ -82,10 +82,11 @@ namespace Palett.Test.Munsell {
         if (polarMark.FoliateRadius(θ, petals) < r) continue;
         var phase = petalNote.Phase(θ);
         if (thresholdPerPhase <= petalNote.Counter[phase]) continue;
-        if (saturInterval.Has(s)) {
+        if (saturInterval.Hold(s)) {
           petalNote.NotePhase(phase);
           sortedList.Add(HslIndicator(hsl), hex);
-        } else {
+        }
+        else {
           var dS = Abs(rimMark.s - s);
           var dR = Abs(rimMark.l - r);
           var dθ = Pol.Distance(rimMark.h, θ);

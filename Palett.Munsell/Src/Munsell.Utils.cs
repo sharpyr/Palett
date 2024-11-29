@@ -28,7 +28,7 @@ namespace Palett {
     }
     public static bool AlmostEqual(this (float h, float s, float l) hsl, (double r, double θ) polar, (double r, double θ) polarEpsilon, (double min, double max) saturationInterval) {
       return Math.AlmostEqual(hsl.h, polar.θ, polarEpsilon.θ) &&
-             saturationInterval.Has(hsl.s) &&
+             saturationInterval.Hold(hsl.s) &&
              Math.AlmostEqual(hsl.l, polar.r, polarEpsilon.r);
     }
   }

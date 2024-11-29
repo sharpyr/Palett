@@ -2,15 +2,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.4.19</PackageVersion>
+    <PackageVersion>0.4.20</PackageVersion>
     <Title>Palett.Convert</Title>
     <Description>Color conversion</Description>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>(c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.4.19</AssemblyVersion>
-    <FileVersion>0.4.19</FileVersion>
+    <AssemblyVersion>0.4.20</AssemblyVersion>
+    <FileVersion>0.4.20</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Palett</RootNamespace>
     <PackageIcon>palett-avatar.png</PackageIcon>
@@ -20,7 +20,7 @@
     <ProjectReference Include="..\Palett.Types\Palett.Types.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Veho.Enumerable" Version="0.6.10"/>
+    <PackageReference Include="Veho.Enumerable" Version="0.6.12"/>
     <None Include="..\media\palett-avatar.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>

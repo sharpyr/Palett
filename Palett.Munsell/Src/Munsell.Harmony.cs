@@ -59,7 +59,7 @@ namespace Palett {
         if (polarMark.FoliateRadius(θ, petals) < r) continue;
         var phase = petalNote.Phase(θ);
         if (thresholdPerPhase <= petalNote.Counter[phase]) continue;
-        if (saturInterval.Has(s)) {
+        if (saturInterval.Hold(s)) {
           petalNote.NotePhase(phase);
           sortedList.Add(HslIndicator(hsl), hex);
         }
